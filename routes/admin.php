@@ -1,3 +1,3 @@
 <?php
 
-Route::get('/' ,[\App\Http\Controllers\Admin\HomeController::class, 'index']);
+Route::get('/' ,[\App\Http\Controllers\Admin\AdminHomeController::class, 'index']);
