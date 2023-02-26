@@ -24,12 +24,7 @@ class AuthController extends Controller
         $input = $request->validated();
 
         $input['password'] = Hash::make($input['password']);
-        if(isset($input['image'])){
-            $input['image'] = $input['image']->store('users', 'public');
-        }
-        else{
-            $input['image'] = 'user.png';
-        }
+        $input['image'] = 'user.png';
 
         $input['role_id'] = Roles::PLAYER;
 

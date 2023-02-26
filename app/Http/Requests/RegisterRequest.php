@@ -23,9 +23,7 @@ class RegisterRequest extends FormRequest
 
             'height' => ['required'],
 
-            'phone' => ['required' , 'numeric' , 'min:11'],
-
-            'image' => ['nullable']
+            'phone' => ['required' , 'numeric' , 'min:11']
 
         ];
     }

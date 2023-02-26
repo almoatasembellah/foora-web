@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Constants\Roles;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
@@ -56,8 +57,7 @@ class RegisterController extends Controller
             'age' => ['required', 'string'],
             'height' =>['required', 'string'],
             'weight'=>['required', 'string'],
-            'phone' => ['required', 'string', 'max:11','unique:users'],
-            'image' => ['required', 'image'],
+            'phone' => ['required', 'string', 'max:11','unique:users']
         ]);
     }
 
@@ -69,10 +69,6 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $path = '';
-        if($data['image']){
-            $path = $data['image']->store('users', 'public');
-        }
 
         return User::create([
             'name' => $data['name'],
@@ -82,7 +78,8 @@ class RegisterController extends Controller
             'height' => $data['height'],
             'weight' => $data['weight'],
             'phone' => $data['phone'],
-            'image' => $path,
+            'image' => 'user.png',
+            'role_id' => Roles::PLAYER
         ]);
     }
 }
