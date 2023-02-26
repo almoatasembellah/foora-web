@@ -6,6 +6,7 @@ use App\Constants\Roles;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\LoginRequest;
 use App\Http\Requests\RegisterRequest;
+use App\Http\Requests\UpdateProfileRequest;
 use App\Http\Requests\UploadImageRequest;
 use App\Http\Resources\Api\UserResource;
 use App\Http\Traits\HandleApi;
@@ -82,8 +83,14 @@ class AuthController extends Controller
         $request->user()->update([
             'image' => $imagePath
         ]);
-        return $this->sendResponse([], 'Profile is changed Successfully');
+        return $this->sendResponse([], 'Profile Image is changed Successfully');
 
     }
 
+    public function updateProfile(UpdateProfileRequest $request): JsonResponse
+    {
+        $request->user()->update($request->validated());
+        return $this->sendResponse([], 'Profile Data is changed Successfully');
+
+    }
 }
