@@ -18,7 +18,7 @@
 @section('content')
     <div class="container d-flex w-100 align-items-center bg-white rounded-5 p-0">
         <div class="col-md-5">
-            <img src="{{ asset('img/football.jpg') }}" alt="Sample photo" class="img-fluid"/>
+            <img src="{{ asset('img/login.jpeg') }}" alt="Sample photo" class="img-fluid"/>
         </div>
 
         <div class="col-md-7">
