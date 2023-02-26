@@ -21,5 +21,6 @@ Route::post('register', [AuthController::class, 'register']);
 Route::group(['middleware' => 'auth:sanctum'] , static function (){
     Route::get('profile', [AuthController::class, 'profile']);
     Route::post('logout', [AuthController::class, 'logout']);
+    Route::post('upload-profile-image', [AuthController::class, 'uploadProfileImage']);
 
 });

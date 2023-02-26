@@ -6,6 +6,7 @@ use App\Constants\Roles;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\LoginRequest;
 use App\Http\Requests\RegisterRequest;
+use App\Http\Requests\UploadImageRequest;
 use App\Http\Resources\Api\UserResource;
 use App\Http\Traits\HandleApi;
 use App\Models\User;
@@ -72,6 +73,17 @@ class AuthController extends Controller
     {
         $request->user()->tokens()->delete();
         return $this->sendResponse([], 'You logout Successfully');
+    }
+
+    public function uploadProfileImage(UploadImageRequest $request): JsonResponse
+    {
+        $imagePath = $request->file('profile_image')?->store('users', 'public');
+
+        $request->user()->update([
+            'image' => $imagePath
+        ]);
+        return $this->sendResponse([], 'Profile is changed Successfully');
+
     }
 
 }
