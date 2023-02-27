@@ -13,6 +13,7 @@
                     <a class="nav-link active text-white" aria-current="page" href="{{ route('home') }}">Home</a>
                 </li>
 
+
             </ul>
 
             <ul class="navbar-nav ms-auto">
@@ -43,6 +44,17 @@
                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
+                            </a>
+
+
+{{--                                <a class="dropdown-item" href="{{ route('user-profile') }}">--}}
+
+{{--                                {{ __('User Profile') }}--}}
+{{--                            </a>--}}
+
+                            <a class="dropdown-item" href="{{ route('change-password') }}">
+
+                                {{ __('Change password') }}
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

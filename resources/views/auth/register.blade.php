@@ -9,7 +9,7 @@
             height: 100vh;
         }
 
-        .container{
+        .container {
             margin-top: 70px !important;
         }
     </style>
@@ -150,6 +150,6 @@
                 </form>
             </div>
         </div>
-
     </div>
+
 @endsection

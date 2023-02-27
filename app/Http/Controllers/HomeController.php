@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -22,7 +21,7 @@ class HomeController extends Controller
     /**
      * Show the application dashboard.
      *
-     * @return Renderable
+     * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
     {
@@ -33,21 +32,26 @@ class HomeController extends Controller
         return view('change-password');
     }
 
-    public function updatePassword(Request $request){
-        #validation
+    public function updatePassword(Request $request)
+    {
+        # Validation
         $request->validate([
-            'old_password' =>'required',
-            'new_password' =>'required|confirmed',
+            'old_password' => 'required',
+            'new_password' => 'required|confirmed',
         ]);
-        #Match The old password
-        if (!Hash::check($request->old_password,auth()->user()->password)){
-            return back()->with("error", "Old password Doesnt Match");
+
+
+        #Match The Old Password
+        if(!Hash::check($request->old_password, auth()->user()->password)){
+            return back()->with("error", "Old Password Doesn't match!");
         }
 
-        #Update the new password
+
+        #Update the new Password
         User::whereId(auth()->user()->id)->update([
             'password' => Hash::make($request->new_password)
         ]);
+
         return back()->with("status", "Password changed successfully!");
     }
 
