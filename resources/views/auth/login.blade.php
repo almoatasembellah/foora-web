@@ -8,7 +8,6 @@
             align-items: center;
             height: 100vh;
         }
-
         .container{
             margin-top: 70px !important;
         }

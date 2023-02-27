@@ -79,7 +79,7 @@ class RegisterController extends Controller
             'weight' => $data['weight'],
             'phone' => $data['phone'],
             'image' => 'user.png',
-            'role_id' => Roles::PLAYER
+            'role_id' => Roles::PLAYER,
         ]);
     }
 }
