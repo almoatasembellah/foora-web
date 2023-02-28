@@ -1,3 +1,4 @@
+@extends('web.layouts.app')
 <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #201c2b;">
     <div class="container-fluid">
         <a class="navbar-brand text-white" href="{{ route('home') }}">
@@ -32,12 +33,20 @@
                 @else
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->name }}
+
+                            <img
+                                src="{{ asset('img/profile-img.jpg') }}"
+                                class="rounded-circle"
+                                width="45"
+                                height="45"
+                                alt=""
+                                loading="lazy"
+                            />
+{{--                            {{ Auth::user()->name }}--}}
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('change-password') }}">
-                                {{ __('Change Password') }}
+                            <a class="dropdown-item" href="{{ route('change-password') }}">{{ __('Change Password') }}
                             </a>
 
                             <a class="dropdown-item" href="{{ route('get-profile') }}">
