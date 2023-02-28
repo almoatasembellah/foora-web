@@ -46,7 +46,7 @@ class Handler extends ExceptionHandler
                 }
 
                 if ($exception instanceof ValidationException) {
-                    $error = $exception->validator->errors()->messages()->first();
+                    $error = $exception->validator->errors()->first();
 
                     return $this->sendError('ValidationException',$error, ResponseAlias::HTTP_BAD_REQUEST);
                 }
