@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\Api\AuthController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,5 +22,5 @@ Route::group(['middleware' => 'auth:sanctum'] , static function (){
     Route::post('logout', [AuthController::class, 'logout']);
     Route::post('upload-profile-image', [AuthController::class, 'uploadProfileImage']);
     Route::put('update-profile', [AuthController::class, 'updateProfile']);
-
+    Route::post('change-password' , [AuthController::class , 'changePassword']);
 });

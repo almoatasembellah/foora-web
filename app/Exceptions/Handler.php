@@ -19,19 +19,10 @@ class Handler extends ExceptionHandler
 {
     use HandleApi;
 
-    protected $dontFlash = [
-        'current_password',
-        'password',
-        'password_confirmation',
-    ];
 
 
     public function register()
     {
-
-        $this->reportable(function (Throwable $e) {
-            //
-        });
 
         $this->renderable(function (Exception $exception, Request $request) {
 
@@ -55,9 +46,9 @@ class Handler extends ExceptionHandler
                 }
 
                 if ($exception instanceof ValidationException) {
-                    $errors = $exception->validator->errors()->messages();
+                    $error = $exception->validator->errors()->messages()->first();
 
-                    return $this->sendValidationErrors('ValidationException',$errors, ResponseAlias::HTTP_BAD_REQUEST);
+                    return $this->sendError('ValidationException',$error, ResponseAlias::HTTP_BAD_REQUEST);
                 }
 
                 if ($exception instanceof QueryException){
@@ -65,9 +56,9 @@ class Handler extends ExceptionHandler
                 }
 
             }
+            return $this->sendError('Internal Server Error','Internal Server Error has been occurred');
 
         });
-
 
     }
 }

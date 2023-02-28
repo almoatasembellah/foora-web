@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Constants\Roles;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ChangePasswordRequest;
 use App\Http\Requests\LoginRequest;
 use App\Http\Requests\RegisterRequest;
 use App\Http\Requests\UpdateProfileRequest;
@@ -11,8 +12,8 @@ use App\Http\Requests\UploadImageRequest;
 use App\Http\Resources\Api\UserResource;
 use App\Http\Traits\HandleApi;
 use App\Models\User;
-use Auth;
-use Hash;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
@@ -93,5 +94,22 @@ class AuthController extends Controller
         $request->user()->update($request->validated());
         return $this->sendResponse([], 'Profile Data is changed Successfully');
 
+    }
+
+    public function changePassword(ChangePasswordRequest $request)
+    {
+
+        #Match The Old Password
+        if(!Hash::check($request->get('old_password'), auth()->user()->password)){
+            return $this->sendError('Error','Old Password Doesn\'t match!',400);
+        }
+
+
+        #Update the new Password
+        User::whereId(auth()->user()->id)->update([
+            'password' => Hash::make($request->get('new_password'))
+        ]);
+
+        return $this->sendResponse([], 'Password changed successfully!');
     }
 }

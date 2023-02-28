@@ -27,17 +27,4 @@ trait HandleApi
         ];
         return response()->json($response, $code);
     }
-
-
-    public function sendValidationErrors($error, $errorMessages = [], $code = 500): JsonResponse
-    {
-        $response = [
-            'success' => false,
-            'message' => $error,
-        ];
-        if(!empty($errorMessages)){
-            $response['errors'] = $errorMessages;
-        }
-        return response()->json($response, $code);
-    }
 }
