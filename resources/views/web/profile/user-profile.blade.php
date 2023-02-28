@@ -1,5 +1,5 @@
-@extends('layouts.app')
-
+@extends('web.layouts.app')
+@include('web.layouts.navbar')
 
 @section('content')
     <h1>{{ $user->name }}</h1>

@@ -96,4 +96,5 @@
             </div>
         </div>
     </div>
+    @include('web.layouts.footer')
 @endsection

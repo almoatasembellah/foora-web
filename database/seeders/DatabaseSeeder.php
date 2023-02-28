@@ -13,10 +13,5 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
 //        $this->call([RolesSeeder::class , CitySeeder::class , AreaSeeder::class]);
-
-        $this->call(AdminSeeder::class);
-        $this->call(AreaSeeder::class);
-        $this->call(CitySeeder::class);
-        $this->call(RolesSeeder::class);
     }
 }
