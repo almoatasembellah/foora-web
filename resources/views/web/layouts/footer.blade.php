@@ -7,7 +7,7 @@
                     <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt.</p>
                     <p class="small text-muted mb-0">&copy; Copyrights. All rights reserved. <a class="text-primary"
-                                                                                                href="#">{{ config('app.url') }}</a>
+                                                                                                href="#">{{ config('app.name') }}</a>
                     </p>
                 </div>
 
