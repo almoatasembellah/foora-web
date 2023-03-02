@@ -29,7 +29,7 @@
     <link href="{{ asset('vendor/simple-datatables/style.css') }}" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet">
 
 </head>
 
@@ -124,7 +124,7 @@
 <script src="{{ asset('vendor/php-email-form/validate.js') }}"></script>
 
 <!-- Template Main JS File -->
-<script src="{{ asset('js/main.js') }}"></script>
+<script src="{{ asset('admin/js/main.js') }}"></script>
 
 </body>
 
