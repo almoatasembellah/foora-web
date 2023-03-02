@@ -56,7 +56,7 @@ class Handler extends ExceptionHandler
                 }
 
             }
-            return $this->sendError('Internal Server Error','Internal Server Error has been occurred');
+            return $this->sendError('Internal Server Error',$exception->getMessage());
 
         });
 

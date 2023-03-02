@@ -2,17 +2,15 @@
 
 @section('page-styles')
     <style>
-        body {
-            background: #201c2b;
+        body{
+            height: 90vh;
             display: flex;
             align-items: center;
-            height: 100vh;
-        }
-        .container{
-            margin-top: 70px !important;
+            background: #0a1429;
         }
     </style>
 @endsection
+
 
 @section('content')
     <div class="container d-flex w-100 align-items-center bg-white rounded-5 p-0">
