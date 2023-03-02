@@ -30,5 +30,6 @@ Route::group(['middleware' => 'auth:sanctum'] , static function (){
     Route::post('change-password' , [AuthController::class , 'changePassword']);
 
     Route::post('create-game' , [GamesController::class , 'createGame']);
+    Route::get('games' , [GamesController::class , 'listGame']);
 
 });
