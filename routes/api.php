@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\GameController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +25,4 @@ Route::group(['middleware' => 'auth:sanctum'] , static function (){
     Route::put('update-profile', [AuthController::class, 'updateProfile']);
     Route::post('change-password' , [AuthController::class , 'changePassword']);
 });
+    Route::apiResource('games', GameController::class);

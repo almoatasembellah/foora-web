@@ -14,6 +14,10 @@
                     <a class="nav-link active text-white" aria-current="page" href="{{ route('home') }}">Home</a>
                 </li>
 
+                <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="{{ route('games.create') }}">Games</a>
+                </li>
+
 
             </ul>
 
