@@ -11,13 +11,21 @@ class CitiesController extends Controller
 {
     public function index()
     {
-        $allCities = City::latest()->paginate(10);
-        return view('admin.pages.cities.index' , compact('allCities'));
+        $cities = City::latest()->paginate(10);
+        return view('admin.pages.cities.index' , compact('cities'));
     }
 
 
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required'
+        ]);
+
+       City::create([
+            'name' => $request->get('name')
+        ]);
+        return redirect()->route('admin.cities.index')->with(['success' => 'City has been added successfully']);
     }
 
 

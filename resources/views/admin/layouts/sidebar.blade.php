@@ -19,7 +19,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link {{ !Route::is('admin.areas') ? 'collapsed' : '' }}" href="#">
+            <a class="nav-link {{ !Route::is('admin.areas.index') ? 'collapsed' : '' }}" href="{{ route('admin.areas.index') }}">
                 <i class="bi bi-grid"></i>
                 <span>Areas</span>
             </a>
@@ -41,12 +41,6 @@
             <a class="nav-link {{ !Route::is('admin.roles') ? 'collapsed' : '' }}" href="#">
                 <i class="bi bi-grid"></i>
                 <span>Recomended Games</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {{ !Route::is('admin.roles') ? 'collapsed' : '' }}" href="#">
-                <i class="bi bi-grid"></i>
-                <span>Roles</span>
             </a>
         </li>
 
