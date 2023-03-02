@@ -62,7 +62,7 @@ class AuthController extends Controller
 
         }
 
-        return $this->sendError('Unauthorized',['This email or password is wrong.'],403);
+        return $this->sendError('Unauthorized','This email or password is wrong.',403);
     }
 
     public function profile(Request $request): JsonResponse
