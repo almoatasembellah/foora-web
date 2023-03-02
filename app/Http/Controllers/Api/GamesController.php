@@ -11,32 +11,8 @@ class GamesController extends Controller
 {
     use HandleApi;
 
-    public function index()
+    public function createGame()
     {
 
-    }
-
-    public function create()
-    {
-    }
-
-    public function store(Request $request)
-    {
-    }
-
-    public function show(Game $game)
-    {
-    }
-
-    public function edit(Game $game)
-    {
-    }
-
-    public function update(Request $request, Game $game)
-    {
-    }
-
-    public function destroy(Game $game)
-    {
     }
 }

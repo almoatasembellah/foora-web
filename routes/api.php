@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\GamesController;
+use App\Http\Controllers\Api\GeneralController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,6 +19,9 @@ use Illuminate\Support\Facades\Route;
 Route::post('login', [AuthController::class, 'login']);
 Route::post('register', [AuthController::class, 'register']);
 
+Route::get('get-cities', [GeneralController::class, 'getALlCities']);
+Route::get('city/{city_id}/areas', [GeneralController::class, 'getCityAreas']);
+
 Route::group(['middleware' => 'auth:sanctum'] , static function (){
     Route::get('profile', [AuthController::class, 'profile']);
     Route::post('logout', [AuthController::class, 'logout']);
@@ -25,6 +29,6 @@ Route::group(['middleware' => 'auth:sanctum'] , static function (){
     Route::put('update-profile', [AuthController::class, 'updateProfile']);
     Route::post('change-password' , [AuthController::class , 'changePassword']);
 
-    Route::resource('games' , GamesController::class);
+    Route::post('create-game' , [GamesController::class , 'createGame']);
 
 });
