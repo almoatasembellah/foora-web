@@ -19,7 +19,7 @@
 
 
 
-<script src="{{ asset('js/main.js') }}"></script>
+<script src="{{ asset('admin/js/main.js') }}"></script>
 
 <script>
     $(".alert-danger").fadeTo(2000, 500).slideUp(1000, function () {

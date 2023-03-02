@@ -18,13 +18,13 @@ trait HandleApi
     }
 
 
-    public function sendError($error, $message, $code = 500): JsonResponse
+    public function sendError($error, $message): JsonResponse
     {
         $response = [
             'success' => false,
             'error' => $error,
             'message' => $message,
         ];
-        return response()->json($response, $code);
+        return response()->json($response);
     }
 }
