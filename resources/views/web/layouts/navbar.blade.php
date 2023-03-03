@@ -18,6 +18,14 @@
                     <a class="nav-link active text-white" aria-current="page" href="{{ route('games.create') }}">Games</a>
                 </li>
 
+                <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="{{ route('venues.index') }}">Venues</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="{{ route('stadiums.index') }}">Stadiums</a>
+                </li>
+
 
             </ul>
 

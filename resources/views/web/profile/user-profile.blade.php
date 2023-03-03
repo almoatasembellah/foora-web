@@ -41,8 +41,8 @@
                     <div class="p-5 ms-0">
                         <div>
                             <div class="d-flex justify-content-start ms-2">
-                                <img src="{{ asset($user->image)  }}" id="photo" class="rounded-circle" alt=""
-                                     style="width: 80px; height: 80px;" />
+                                <img src="{{ url(Auth::user()->picture ??
+                                '/public/img/soccer-player.png') }}" class="img-profile rounded-circle" alt="User Image" width="24" height="24">
                             </div>
                             <h5 class="fw-bolder mt-4">{{ $user->name }}</h5>
                             <p class="text-muted">{{ $user->email }}</p>

@@ -8,7 +8,7 @@
                 <h2>Create Your Game</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('games.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('home') }}"> Back</a>
             </div>
         </div>
     </div>
