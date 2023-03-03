@@ -6,14 +6,14 @@
             height: 90vh;
             display: flex;
             align-items: center;
-            background: #0a1429;
+            background: #0a1429!important;
         }
     </style>
 @endsection
 
 
 @section('content')
-    <div class="container d-flex w-100 align-items-center bg-white rounded-5 p-0">
+    <div class="container d-flex w-80 align-items-center bg-white rounded-5 p-0">
         <div class="col-md-5">
             <img src="{{ asset('img/login.jpeg') }}" alt="Sample photo" class="img-fluid"/>
         </div>

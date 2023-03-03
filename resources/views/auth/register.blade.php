@@ -3,7 +3,7 @@
 @section('page-styles')
     <style>
         body {
-            background: #201c2b;
+            background: #201c2b!important;
             display: flex;
             align-items: center;
             height: 100vh;
