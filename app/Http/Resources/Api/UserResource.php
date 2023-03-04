@@ -16,8 +16,9 @@ class UserResource extends JsonResource
             'height' => $this['height'],
             'weight' => $this['weight'],
             'image' => $this['image'] === 'user.png' ?  url('images/user.png') : url("storage/{$this['image']}"),
-            'phone' => $this['phone']
-
+            'phone' => $this['phone'],
+            'city' => $this['city']['name'],
+            'area' => $this['area']['name']
         ]);
     }
 }

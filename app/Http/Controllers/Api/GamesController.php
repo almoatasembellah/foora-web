@@ -12,14 +12,18 @@ use Illuminate\Http\Request;
 class GamesController extends Controller
 {
     use HandleApi;
-    public function index()
+    public function getRequestedGames(Request $request)
     {
-        $games = Game::all();
+        $games = Game::where('user_id' , $request->user()->id)->get();
         return $this->sendResponse(GameResource::collection($games) , 'Game list is fetched successfully');
     }
 
-    public function store(GameRequest $request)
+    public function createGame(GameRequest $request)
     {
+        $existGame = Game::where($request->validated())->first();
+        if ($existGame){
+            return $this->sendError("Game Create Error", "This game is already created");
+        }
         $game = Game::create($request->validated());
         return $this->sendResponse(GameResource::make($game) , 'Game is requested successfully');
     }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Http\Resources\Api\UserResource;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -9,8 +10,8 @@ class   GameResource extends JsonResource
 {
     public function toArray(Request $request): array
     {
-        return [
-            'venue_name' => $this['venue_name'],
+        return array_filter([
+            'venue_name' => $this['name'],
             'phone' => $this['phone'],
             'number_of_players' => $this['number_of_players'],
             'price' => $this['price'],
@@ -18,8 +19,8 @@ class   GameResource extends JsonResource
             'time' => $this['time'],
             'city' => $this['city']['name'],
             'area' => $this['area']['name'],
-            'location' => $this['location']
-
-        ];
+            'user' => UserResource::make($this['user']),
+            'location' => $this['location_url']
+        ]);
     }
 }

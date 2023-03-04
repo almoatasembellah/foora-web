@@ -18,4 +18,9 @@ class Game extends Model
     {
         return $this->belongsTo(Area::class);
     }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

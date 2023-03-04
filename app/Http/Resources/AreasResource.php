@@ -9,10 +9,10 @@ class AreasResource extends JsonResource
 {
     public function toArray(Request $request): array
     {
-        return [
+        return array_filter([
             'id' => $this['id'],
             'name' => $this['name'],
             'city' => $this['city']['name']
-        ];
+        ]);
     }
 }

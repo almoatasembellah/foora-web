@@ -9,9 +9,9 @@ class CityResource extends JsonResource
 {
     public function toArray(Request $request): array
     {
-        return [
+        return array_filter([
             'id' => $this['id'],
             'name' => $this['name']
-        ];
+        ]);
     }
 }
