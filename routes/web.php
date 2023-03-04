@@ -1,10 +1,10 @@
 <?php
 
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\StadiumController;
-use App\Http\Controllers\VenueController;
 use App\Http\Controllers\Web\GameController;
+use App\Http\Controllers\Web\HomeController;
 use App\Http\Controllers\Web\ProfileController;
+use App\Http\Controllers\Web\StadiumController;
+use App\Http\Controllers\Web\VenueController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 

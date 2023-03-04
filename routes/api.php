@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\GamesController;
+use App\Http\Controllers\Api\GeneralController;
 use App\Http\Controllers\Api\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,4 +29,6 @@ Route::group(['middleware' => 'auth:sanctum'] , static function (){
     Route::get('profile', [ProfileController::class, 'show']);
     Route::delete('delete-profile-image', [ProfileController::class, 'deleteProfileImage']);
 });
+Route::get('get-cities' , [GeneralController::class , 'getALlCities']);
+Route::get('city/{city_id}/areas' , [GeneralController::class , 'getCityAreas']);
 Route::apiResource('games', GamesController::class);
