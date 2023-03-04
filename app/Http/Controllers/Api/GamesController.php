@@ -31,7 +31,7 @@ class GamesController extends Controller
 
     public function update(GameRequest $request,$id)
     {
-        $game = Game::where('id',$id)->first();
+        $game = Game::where(['id' => $id , 'user_id' => $request->user()->id])->first();
         if ($game ){
         $game->update($request->all());
         return $this->sendResponse([],"Game updated successfully");
@@ -39,9 +39,9 @@ class GamesController extends Controller
         return $this->sendError("Game Update Error", "Game Not Found");
     }
 
-    public function destroy($id)
+    public function destroy(Request $request ,$id)
     {
-        $game = Game::where('id',$id)->first();
+        $game = Game::where(['id' => $id , 'user_id' => $request->user()->id])->first();
         if ($game ){
             $game->delete();
             return $this->sendResponse([],"Game Deleted successfully");

@@ -31,6 +31,9 @@ Route::group(['middleware' => 'auth:sanctum'] , static function (){
 
     Route::get('get-requested-games' , [GamesController::class , 'getRequestedGames']);
     Route::post('create-game' , [GamesController::class , 'createGame']);
+    Route::put('update-game/{id}' , [GamesController::class , 'update']);
+    Route::delete('delete-game/{id}' , [GamesController::class , 'destroy']);
+
 
 });
 
