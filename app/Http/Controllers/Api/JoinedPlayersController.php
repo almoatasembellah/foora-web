@@ -29,8 +29,6 @@ class JoinedPlayersController extends Controller
 
     public function getGameJoins(){
         $joinedPlayers = JoinedPlayer::with(['game', 'user'])->get();
-
-        return GameJoinsResource::collection($joinedPlayers);
-
+        return $this->sendResponse(GameJoinsResource::collection($joinedPlayers), "Game is joined successfully");
     }
 }
