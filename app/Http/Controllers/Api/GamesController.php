@@ -32,7 +32,9 @@ class GamesController extends Controller
         if ($existGame){
             return $this->sendError("Game Create Error", "This game is already created");
         }
-        $game = Game::create($request->validated());
+        $data = $request->validated();
+        $data['user_id'] = $request->user()->id;
+        $game = Game::create($data);
         return $this->sendResponse(GameResource::make($game) , 'Game is requested successfully');
     }
 
