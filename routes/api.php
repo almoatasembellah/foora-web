@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\GamesController;
+use App\Http\Controllers\Api\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,10 +20,12 @@ Route::post('login', [AuthController::class, 'login']);
 Route::post('register', [AuthController::class, 'register']);
 
 Route::group(['middleware' => 'auth:sanctum'] , static function (){
-    Route::get('profile', [AuthController::class, 'profile']);
     Route::post('logout', [AuthController::class, 'logout']);
-    Route::post('upload-profile-image', [AuthController::class, 'uploadProfileImage']);
     Route::put('update-profile', [AuthController::class, 'updateProfile']);
     Route::post('change-password' , [AuthController::class , 'changePassword']);
+
+    Route::post('upload-profile-image', [ProfileController::class, 'uploadProfileImage']);
+    Route::get('profile', [ProfileController::class, 'show']);
+    Route::delete('delete-profile-image', [ProfileController::class, 'deleteProfileImage']);
 });
 Route::apiResource('games', GamesController::class);

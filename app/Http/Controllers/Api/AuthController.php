@@ -65,12 +65,7 @@ class AuthController extends Controller
         return $this->sendError('Unauthorized','This email or password is wrong.',403);
     }
 
-    public function profile(Request $request): JsonResponse
-    {
 
-        return $this->sendResponse(UserResource::make($request->user()), 'Profile is fetched successfully.');
-
-    }
 
     public function logout(Request $request): JsonResponse
     {
@@ -78,16 +73,6 @@ class AuthController extends Controller
         return $this->sendResponse([], 'You logout Successfully');
     }
 
-    public function uploadProfileImage(UploadImageRequest $request): JsonResponse
-    {
-        $imagePath = $request->file('profile_image')?->store('users', 'public');
-
-        $request->user()->update([
-            'image' => $imagePath
-        ]);
-        return $this->sendResponse([], 'Profile Image is changed Successfully');
-
-    }
 
     public function updateProfile(UpdateProfileRequest $request): JsonResponse
     {
