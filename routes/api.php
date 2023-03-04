@@ -22,7 +22,7 @@ Route::post('register', [AuthController::class, 'register']);
 
 Route::group(['middleware' => 'auth:sanctum'] , static function (){
     Route::post('logout', [AuthController::class, 'logout']);
-    Route::put('update-profile', [AuthController::class, 'updateProfile']);
+    Route::put('update-profile', [ProfileController::class, 'update']);
     Route::post('change-password' , [AuthController::class , 'changePassword']);
 
     Route::post('upload-profile-image', [ProfileController::class, 'uploadProfileImage']);

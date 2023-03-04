@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\UpdateProfileRequest;
 use App\Http\Requests\UploadImageRequest;
 use App\Http\Resources\Api\UserResource;
 use App\Http\Traits\HandleApi;
@@ -17,6 +18,13 @@ class ProfileController extends Controller
     {
 
         return $this->sendResponse(UserResource::make($request->user()), 'Profile is fetched successfully.');
+
+    }
+
+    public function update(UpdateProfileRequest $request): JsonResponse
+    {
+        $request->user()->update($request->validated());
+        return $this->sendResponse([], 'Profile Data is changed Successfully');
 
     }
 

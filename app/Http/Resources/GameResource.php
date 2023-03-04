@@ -11,6 +11,7 @@ class GameResource extends JsonResource
     public function toArray(Request $request): array
     {
         return array_filter([
+            'id' => $this['id'],
             'venue_name' => $this['name'],
             'phone' => $this['phone'],
             'number_of_players' => $this['number_of_players'],

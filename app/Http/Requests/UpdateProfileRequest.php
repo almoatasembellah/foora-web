@@ -21,11 +21,7 @@ class UpdateProfileRequest extends FormRequest
 
             'height' => ['required'],
 
-            'phone' => ['required' , 'numeric' , 'min:11'],
-
-            'city_id' => ['required' , Rule::exists('cities' , 'id')],
-
-            'area_id' => ['required' , Rule::exists('areas' , 'id')]
+            'phone' => ['required' , 'numeric' , 'min:11']
         ];
     }
 

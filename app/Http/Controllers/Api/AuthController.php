@@ -74,12 +74,7 @@ class AuthController extends Controller
     }
 
 
-    public function updateProfile(UpdateProfileRequest $request): JsonResponse
-    {
-        $request->user()->update($request->validated());
-        return $this->sendResponse([], 'Profile Data is changed Successfully');
 
-    }
 
     public function changePassword(ChangePasswordRequest $request)
     {
