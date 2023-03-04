@@ -10,6 +10,7 @@ class UserResource extends JsonResource
     public function toArray(Request $request): array
     {
         return array_filter([
+            'id' => $this['id'],
             'name' => $this['name'],
             'email' => $this['email'],
             'age' => $this['age'],

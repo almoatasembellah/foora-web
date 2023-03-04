@@ -17,7 +17,12 @@ class GamesController extends Controller
     public function searchGames(SearchGameRequest $request)
     {
         $games = Game::where('user_id' , '!=' , $request->user()->id)
-            ->where(['area_id' => $request->get('area_id') , 'city_id' => $request->get('city_id')])->get();
+            ->where('city_id' , $request->get('city_id'))
+            ->where(function ($query) use ($request) {
+                if ($request->get('area_id')){
+                    return $query->where('area_id' , $request->get('area_id'));
+                }
+            })->get();
         return $this->sendResponse(GameResource::collection($games) , 'Game list is fetched successfully');
     }
     public function getRequestedGames(Request $request)

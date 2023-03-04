@@ -10,7 +10,7 @@ class GameResource extends JsonResource
 {
     public function toArray(Request $request): array
     {
-        return array_filter([
+        return[
             'id' => $this['id'],
             'venue_name' => $this['name'],
             'phone' => $this['phone'],
@@ -21,7 +21,8 @@ class GameResource extends JsonResource
             'city' => $this['city']['name'],
             'area' => $this['area']['name'],
             'user' => UserResource::make($this['user']),
-            'location' => $this['location_url']
-        ]);
+            'location' => $this['location_url'],
+            'joined_players' => getJoinedPlayersCount($this['id'])
+        ];
     }
 }

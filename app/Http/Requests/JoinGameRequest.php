@@ -5,14 +5,12 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-class SearchGameRequest extends FormRequest
+class JoinGameRequest extends FormRequest
 {
     public function rules(): array
     {
         return [
-            'city_id' => ['required' , Rule::exists('cities' , 'id')],
-
-            'area_id' => ['nullable' , Rule::exists('areas' , 'id')]
+            'game_id' => ['required' , Rule::exists('joined_players' , 'game_id')],
         ];
     }
 

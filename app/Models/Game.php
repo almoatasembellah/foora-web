@@ -23,4 +23,9 @@ class Game extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function joinedPlayers()
+    {
+        return $this->hasMany(JoinedPlayer::class);
+    }
 }

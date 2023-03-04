@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\GamesController;
 use App\Http\Controllers\Api\GeneralController;
+use App\Http\Controllers\Api\JoinedPlayersController;
 use App\Http\Controllers\Api\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -36,6 +37,8 @@ Route::group(['middleware' => 'auth:sanctum'] , static function (){
     Route::delete('delete-game/{id}' , [GamesController::class , 'destroy']);
 
 
+    Route::post('join-game' , [JoinedPlayersController::class , 'joinGame']);
+    Route::post('game-joins-list' , [JoinedPlayersController::class , 'getGameJoins']);
 });
 
 Route::get('get-cities' , [GeneralController::class , 'getALlCities']);
