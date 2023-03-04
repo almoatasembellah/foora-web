@@ -29,7 +29,7 @@ Route::group(['middleware' => 'auth:sanctum'] , static function (){
     Route::get('profile', [ProfileController::class, 'show']);
     Route::delete('delete-profile-image', [ProfileController::class, 'deleteProfileImage']);
 
-    Route::get('get-all-games' , [GamesController::class , 'getAllGames']);
+    Route::post('search-games' , [GamesController::class , 'searchGames']);
     Route::get('get-requested-games' , [GamesController::class , 'getRequestedGames']);
     Route::post('create-game' , [GamesController::class , 'createGame']);
     Route::put('update-game/{id}' , [GamesController::class , 'update']);

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\GameRequest;
+use App\Http\Requests\SearchGameRequest;
 use App\Http\Resources\GameResource;
 use App\Http\Traits\HandleApi;
 use App\Models\Game;
@@ -13,9 +14,10 @@ class GamesController extends Controller
 {
     use HandleApi;
 
-    public function getAllGames(Request $request)
+    public function searchGames(SearchGameRequest $request)
     {
-        $games = Game::where('user_id' , '!=' , $request->user()->id)->get();
+        $games = Game::where('user_id' , '!=' , $request->user()->id)
+            ->where(['area_id' => $request->get('area_id') , 'city_id' => $request->get('city_id')])->get();
         return $this->sendResponse(GameResource::collection($games) , 'Game list is fetched successfully');
     }
     public function getRequestedGames(Request $request)
