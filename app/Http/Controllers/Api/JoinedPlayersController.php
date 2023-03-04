@@ -16,22 +16,19 @@ class JoinedPlayersController extends Controller
 
     public function joinGame(JoinGameRequest $request)
     {
-        $isAlreadyJoinGame = (bool) JoinedPlayer::where(['user_id' => $request->user()->id , 'game_id' => $request->get('game_id')])->first();
-        if (!$isAlreadyJoinGame){
+        $isAlreadyJoinGame = (bool)JoinedPlayer::where(['user_id' => $request->user()->id, 'game_id' => $request->get('game_id')])->first();
+        if (!$isAlreadyJoinGame) {
             JoinedPlayer::create([
                 'user_id' => $request->user()->id,
                 'game_id' => $request->get('game_id')
             ]);
-            return $this->sendResponse([],"Game is joined successfully");
+            return $this->sendResponse([], "Game is joined successfully");
         }
         return $this->sendError("Game join Error", "Game is already joined Found");
     }
 
-    public function getGameJoins(JoinGameRequest $request)
-
-
-    {
-        $joinedPlayers = JoinedPlayer::with(['game' , 'user'])->get();
+    public function getGameJoins(){
+        $joinedPlayers = JoinedPlayer::with(['game', 'user'])->get();
 
         return GameJoinsResource::collection($joinedPlayers);
 

@@ -10,7 +10,7 @@ class JoinGameRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'game_id' => ['required' , Rule::exists('games' , 'game_id')],
+            'game_id' => ['required' , Rule::exists('games' , 'id')],
         ];
     }
 
