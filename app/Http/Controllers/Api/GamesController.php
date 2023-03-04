@@ -12,6 +12,12 @@ use Illuminate\Http\Request;
 class GamesController extends Controller
 {
     use HandleApi;
+
+    public function getAllGames(Request $request)
+    {
+        $games = Game::where('user_id' , '!=' , $request->user()->id)->get();
+        return $this->sendResponse(GameResource::collection($games) , 'Game list is fetched successfully');
+    }
     public function getRequestedGames(Request $request)
     {
         $games = Game::where('user_id' , $request->user()->id)->get();

@@ -6,7 +6,7 @@ use App\Http\Resources\Api\UserResource;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class   GameResource extends JsonResource
+class GameResource extends JsonResource
 {
     public function toArray(Request $request): array
     {
