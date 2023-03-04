@@ -375,26 +375,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <!-- <div class="col-md-6">
-                                                            <div class="form-group">
-                                                                  <label class="h4">Game Type</label>
-                                                                    <p class="text-muted">Please select the type of the pitch player numbers</p>
-                                                                  <div class="game-type">
-                                                                    <div class="form-check form-check-inline">
-                                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                                                        <label class="form-check-label" for="inlineRadio1">x5</label>
-                                                                      </div>
-                                                                      <div class="form-check form-check-inline">
-                                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                                                        <label class="form-check-label" for="inlineRadio2">x7</label>
-                                                                      </div>
-                                                                      <div class="form-check form-check-inline">
-                                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                                                                        <label class="form-check-label" for="inlineRadio3">x11</label>
-                                                                      </div>
-                                                                  </div>
-                                                            </div>
-                                                        </div> -->
+
                                                     </div>
                                                 </div>
                                             </form>
@@ -434,6 +415,7 @@
                         <div class="carousel-inner my-3 mx-3">
                             <div class="item active">
                                 <div class="row">
+
                                     <div class="col-sm-3 my-3">
                                         <div class="thumb-wrapper">
 
@@ -452,142 +434,15 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-3 my-3">
-                                        <div class="thumb-wrapper">
 
-                                            <div class="img-box">
-                                                <img src="imags/kora2.jpg" class="img-responsive" alt="">
-                                            </div>
-                                            <div class="thumb-content">
 
-                                                <h4>Gohary Stadium</h4>
-                                                <h4>Ain Shams</h4>
-                                                <p><span>2 Octoper,2023</span> <span>|</span> <span>Cairo</span></p>
-                                                <h4><i class='bx bxs-watch' style='color:#0a1429' ></i> 9:00 PM</h4>
-                                                <h4><i class='bx bxs-user' style='color:#0a1429' ></i> <span>2</span> <span>/</span> <span>5</span> <span>Players</span></h4>
-                                                <p><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> 25 EGP</p>
-                                                <a href="#" class="btn">Join Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 my-3">
-                                        <div class="thumb-wrapper">
 
-                                            <div class="img-box">
-                                                <img src="imags/kora2.jpg" class="img-responsive" alt="">
-                                            </div>
-                                            <div class="thumb-content">
-
-                                                <h4>Gohary Stadium</h4>
-                                                <h4>Ain Shams</h4>
-                                                <p><span>2 Octoper,2023</span> <span>|</span> <span>Cairo</span></p>
-                                                <h4><i class='bx bxs-watch' style='color:#0a1429' ></i> 9:00 PM</h4>
-                                                <h4><i class='bx bxs-user' style='color:#0a1429' ></i> <span>2</span> <span>/</span> <span>5</span> <span>Players</span></h4>
-                                                <p><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> 25 EGP</p>
-                                                <a href="#" class="btn">Join Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 my-3">
-                                        <div class="thumb-wrapper">
-
-                                            <div class="img-box">
-                                                <img src="imags/kora2.jpg" class="img-responsive" alt="">
-                                            </div>
-                                            <div class="thumb-content">
-
-                                                <h4>Gohary Stadium</h4>
-                                                <h4>Ain Shams</h4>
-                                                <p><span>2 Octoper,2023</span> <span>|</span> <span>Cairo</span></p>
-                                                <h4><i class='bx bxs-watch' style='color:#0a1429' ></i> 9:00 PM</h4>
-                                                <h4><i class='bx bxs-user' style='color:#0a1429' ></i> <span>2</span> <span>/</span> <span>5</span> <span>Players</span></h4>
-                                                <p><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> 25 EGP</p>
-                                                <a href="#" class="btn">Join Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="row">
-                                    <div class="col-sm-3 my-3">
-                                        <div class="thumb-wrapper">
-
-                                            <div class="img-box">
-                                                <img src="imags/kora2.jpg" class="img-responsive" alt="">
-                                            </div>
-                                            <div class="thumb-content">
-
-                                                <h4>Gohary Stadium</h4>
-                                                <h4>Ain Shams</h4>
-                                                <p><span>2 Octoper,2023</span> <span>|</span> <span>Cairo</span></p>
-                                                <h4><i class='bx bxs-watch' style='color:#0a1429' ></i> 9:00 PM</h4>
-                                                <h4><i class='bx bxs-user' style='color:#0a1429' ></i> <span>2</span> <span>/</span> <span>5</span> <span>Players</span></h4>
-                                                <p><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> 25 EGP</p>
-                                                <a href="#" class="btn">Join Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 my-3">
-                                        <div class="thumb-wrapper">
-
-                                            <div class="img-box">
-                                                <img src="imags/kora2.jpg" class="img-responsive" alt="">
-                                            </div>
-                                            <div class="thumb-content">
-
-                                                <h4>Gohary Stadium</h4>
-                                                <h4>Ain Shams</h4>
-                                                <p><span>2 Octoper,2023</span> <span>|</span> <span>Cairo</span></p>
-                                                <h4><i class='bx bxs-watch' style='color:#0a1429' ></i> 9:00 PM</h4>
-                                                <h4><i class='bx bxs-user' style='color:#0a1429' ></i> <span>2</span> <span>/</span> <span>5</span> <span>Players</span></h4>
-                                                <p><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> 25 EGP</p>
-                                                <a href="#" class="btn">Join Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 my-3">
-                                        <div class="thumb-wrapper">
-
-                                            <div class="img-box">
-                                                <img src="imags/kora2.jpg" class="img-responsive" alt="">
-                                            </div>
-                                            <div class="thumb-content">
-
-                                                <h4>Gohary Stadium</h4>
-                                                <h4>Ain Shams</h4>
-                                                <p><span>2 Octoper,2023</span> <span>|</span> <span>Cairo</span></p>
-                                                <h4><i class='bx bxs-watch' style='color:#0a1429' ></i> 9:00 PM</h4>
-                                                <h4><i class='bx bxs-user' style='color:#0a1429' ></i> <span>2</span> <span>/</span> <span>5</span> <span>Players</span></h4>
-                                                <p><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> 25 EGP</p>
-                                                <a href="#" class="btn">Join Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 my-3">
-                                        <div class="thumb-wrapper">
-
-                                            <div class="img-box">
-                                                <img src="imags/kora2.jpg" class="img-responsive" alt="">
-                                            </div>
-                                            <div class="thumb-content">
-
-                                                <h4>Gohary Stadium</h4>
-                                                <h4>Ain Shams</h4>
-                                                <p><span>2 Octoper,2023</span> <span>|</span> <span>Cairo</span></p>
-                                                <h4><i class='bx bxs-watch' style='color:#0a1429' ></i> 9:00 PM</h4>
-                                                <h4><i class='bx bxs-user' style='color:#0a1429' ></i> <span>2</span> <span>/</span> <span>5</span> <span>Players</span></h4>
-                                                <p><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> 25 EGP</p>
-                                                <a href="#" class="btn">Join Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
 
                                 </div>
                             </div>
                         </div>
 
-                        </a>
+
                     </div>
                 </div>
             </div>
@@ -626,126 +481,17 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-3 my-3">
-                                            <div class="thumb-wrapper">
 
-                                                <div class="img-box">
-                                                    <img src="imags/stadium.png" class="img-fluid" alt="">
-                                                </div>
-                                                <div class="thumb-content">
-
-                                                    <h4>Almasa Stadium</h4>
-                                                    <h4>Nasr City | Cairo</h4>
-                                                    <p><i class='bx bxs-dollar-circle' style='color:#32aa37' ></i> <span>300</span> <span>EGP</span></p>
-                                                    <a href="#" class="btn">Book Now</a>
-                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-3 my-3">
-                                            <div class="thumb-wrapper">
 
-                                                <div class="img-box">
-                                                    <img src="imags/stadium.png" class="img-fluid" alt="">
-                                                </div>
-                                                <div class="thumb-content">
 
-                                                    <h4>Almasa Stadium</h4>
-                                                    <h4>Nasr City | Cairo</h4>
-                                                    <p><i class='bx bxs-dollar-circle' style='color:#32aa37' ></i> <span>300</span> <span>EGP</span></p>
-                                                    <a href="#" class="btn">Book Now</a>
-                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-3 my-3">
-                                            <div class="thumb-wrapper">
-
-                                                <div class="img-box">
-                                                    <img src="imags/stadium.png" class="img-fluid" alt="">
-                                                </div>
-                                                <div class="thumb-content">
-
-                                                    <h4>Almasa Stadium</h4>
-                                                    <h4>Nasr City | Cairo</h4>
-                                                    <p><i class='bx bxs-dollar-circle' style='color:#32aa37' ></i> <span>300</span> <span>EGP</span></p>
-                                                    <a href="#" class="btn">Book Now</a>
-                                                </div>
                                             </div>
                                         </div>
 
                                     </div>
-
-                                    <div class="row">
-                                        <div class="col-sm-3 my-3">
-                                            <div class="thumb-wrapper">
-
-                                                <div class="img-box">
-                                                    <img src="imags/stadium.png" class="img-fluid" alt="">
-                                                </div>
-                                                <div class="thumb-content">
-
-                                                    <h4>Almasa Stadium</h4>
-                                                    <h4>Nasr City | Cairo</h4>
-                                                    <p><i class='bx bxs-dollar-circle' style='color:#32aa37' ></i> <span>300</span> <span>EGP</span></p>
-                                                    <a href="#" class="btn">Book Now</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3 my-3">
-                                            <div class="thumb-wrapper">
-
-                                                <div class="img-box">
-                                                    <img src="imags/stadium.png" class="img-fluid" alt="">
-                                                </div>
-                                                <div class="thumb-content">
-
-                                                    <h4>Almasa Stadium</h4>
-                                                    <h4>Nasr City | Cairo</h4>
-                                                    <p><i class='bx bxs-dollar-circle' style='color:#32aa37' ></i> <span>300</span> <span>EGP</span></p>
-                                                    <a href="#" class="btn">Book Now</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3 my-3">
-                                            <div class="thumb-wrapper">
-
-                                                <div class="img-box">
-                                                    <img src="imags/stadium.png" class="img-fluid" alt="">
-                                                </div>
-                                                <div class="thumb-content">
-
-                                                    <h4>Almasa Stadium</h4>
-                                                    <h4>Nasr City | Cairo</h4>
-                                                    <p><i class='bx bxs-dollar-circle' style='color:#32aa37' ></i> <span>300</span> <span>EGP</span></p>
-                                                    <a href="#" class="btn">Book Now</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3 my-3">
-                                            <div class="thumb-wrapper">
-
-                                                <div class="img-box">
-                                                    <img src="imags/stadium.png" class="img-fluid" alt="">
-                                                </div>
-                                                <div class="thumb-content">
-
-                                                    <h4>Almasa Stadium</h4>
-                                                    <h4>Nasr City | Cairo</h4>
-                                                    <p><i class='bx bxs-dollar-circle' style='color:#32aa37' ></i> <span>300</span> <span>EGP</span></p>
-                                                    <a href="#" class="btn">Book Now</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
     </section>
 
@@ -780,66 +526,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-3 my-3">
-                                        <div class="thumb-wrapper">
-                                            <div class="img-box">
-                                                <img src="imags/profile.jpeg" class="rounded-circle" alt="">
-                                            </div>
-                                            <div class="thumb-content">
 
-                                                <h4>Mutasim Yasser</h4>
-                                                <div class="stars">
-                                                    <i class='bx bxs-star' style='color:#ff9800'  ></i>
-                                                    <i class='bx bxs-star' style='color:#ff9800'  ></i>
-                                                    <i class='bx bxs-star' style='color:#ff9800'  ></i>
-                                                    <i class='bx bxs-star' style='color:#ff9800'  ></i>
-                                                    <i class='bx bxs-star-half' style='color:#ff9800' ></i>
-                                                </div>
-                                                <p><i class='bx bxs-star-half' style='color:#ff9800' ></i>9.0</p>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 my-3">
-                                        <div class="thumb-wrapper">
-                                            <div class="img-box">
-                                                <img src="imags/profile.jpeg" class="rounded-circle" alt="">
-                                            </div>
-                                            <div class="thumb-content">
-
-                                                <h4>Mutasim Yasser</h4>
-                                                <div class="stars">
-                                                    <i class='bx bxs-star' style='color:#ff9800'  ></i>
-                                                    <i class='bx bxs-star' style='color:#ff9800'  ></i>
-                                                    <i class='bx bxs-star' style='color:#ff9800'  ></i>
-                                                    <i class='bx bxs-star' style='color:#ff9800'  ></i>
-                                                    <i class='bx bxs-star-half' style='color:#ff9800' ></i>
-                                                </div>
-                                                <p><i class='bx bxs-star-half' style='color:#ff9800' ></i>9.0</p>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 my-3">
-                                        <div class="thumb-wrapper">
-                                            <div class="img-box">
-                                                <img src="imags/profile.jpeg" class="rounded-circle" alt="">
-                                            </div>
-                                            <div class="thumb-content">
-
-                                                <h4>Mutasim Yasser</h4>
-                                                <div class="stars">
-                                                    <i class='bx bxs-star' style='color:#ff9800'  ></i>
-                                                    <i class='bx bxs-star' style='color:#ff9800'  ></i>
-                                                    <i class='bx bxs-star' style='color:#ff9800'  ></i>
-                                                    <i class='bx bxs-star' style='color:#ff9800'  ></i>
-                                                    <i class='bx bxs-star-half' style='color:#ff9800' ></i>
-                                                </div>
-                                                <p><i class='bx bxs-star-half' style='color:#ff9800' ></i>9.0</p>
-
-                                            </div>
-                                        </div>
-                                    </div>
 
 
 
@@ -847,7 +534,7 @@
                             </div>
                         </div>
 
-                        </a>
+
                     </div>
                 </div>
             </div>
@@ -863,7 +550,7 @@
                     <div class="col-lg-6 wow fadeIn">
                         <div class="row g-0 about-bg rounded overflow-hidden">
                             <div class="col text-center">
-                                <img class="img-fluid rounded-2" src="imags/about.jpg">
+                                <img class="img-fluid rounded-2" src="imags/about.jpg" alt="">
                             </div>
 
                         </div>

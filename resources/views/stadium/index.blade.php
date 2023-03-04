@@ -6,10 +6,10 @@
 @section('content')
 
     <div class="container">
-        <div class="title">
+        <div class="title d-flex justify-content-center mt-4">
            <h1>Featured Stadiums</h1>
         </div>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mb-4 d-flex justify-content-center">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mb-4 d-flex justify-content-center mt-3">
             <div class="col">
                 <label class="text" style="font-weight: 500;">Select Your City</label>
                 <select class="form-select" id="city">
@@ -29,179 +29,22 @@
                 </select>
             </div>
         </div>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mb-4">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mb-4 mt-3">
             <!-- Card 1 -->
             <div class="col text-center">
                 <div class="card staduim-img p-4 rounded-2">
                     <div class="overflow-hidden rounded-2">
-                        <img src="imags/stadium.png" class=" card-img-top" alt="">
+                        <img src="{{asset("img/kora2.jpg")}}" class=" card-img-top" alt="">
                     </div>
                     <div class="card-body">
                         <h4 class="fw-bolder">Almasa Staduim</h4>
                         <h5 class="fw-bolder">Nasr City | Cairo</h5>
                         <p class="m-0 fw-bolder"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> <span>300</span> EGP</p>
-                        <button class="btn btn-outline-warning fw-bolder mt-3">Book Now</button>
+                        <a href=""{{route('venues.index')}}"" class="btn btn-outline-warning fw-bolder mt-3">Book Now</a>
                     </div>
                 </div>
             </div>
-            <!-- Card 2 -->
-            <div class="col text-center">
-                <div class="card staduim-img p-4 rounded-2">
-                    <div class="overflow-hidden rounded-2">
-                        <img src="imags/stadium.png" class=" card-img-top" alt="">
-                    </div>
-                    <div class="card-body">
-                        <h4 class="fw-bolder">Almasa Staduim</h4>
-                        <h5 class="fw-bolder">Nasr City | Cairo</h5>
-                        <p class="m-0 fw-bolder"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> <span>300</span> EGP</p>
-                        <button class="btn btn-outline-warning fw-bolder mt-3">Book Now</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 3 -->
-            <div class="col text-center">
-                <div class="card staduim-img p-4 rounded-2">
-                    <div class="overflow-hidden rounded-2">
-                        <img src="imags/stadium.png" class=" card-img-top" alt="">
-                    </div>
-                    <div class="card-body">
-                        <h4 class="fw-bolder">Almasa Staduim</h4>
-                        <h5 class="fw-bolder">Nasr City | Cairo</h5>
-                        <p class="m-0 fw-bolder"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> <span>300</span> EGP</p>
-                        <button class="btn btn-outline-warning fw-bolder mt-3">Book Now</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 4 -->
-            <div class="col text-center">
-                <div class="card staduim-img p-4 rounded-2">
-                    <div class="overflow-hidden rounded-2">
-                        <img src="imags/stadium.png" class=" card-img-top" alt="">
-                    </div>
-                    <div class="card-body">
-                        <h4 class="fw-bolder">Almasa Staduim</h4>
-                        <h5 class="fw-bolder">Nasr City | Cairo</h5>
-                        <p class="m-0 fw-bolder"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> <span>300</span> EGP</p>
-                        <button class="btn btn-outline-warning fw-bolder mt-3">Book Now</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mb-4">
-            <!-- Card 1 -->
-            <div class="col text-center">
-                <div class="card staduim-img p-4 rounded-2">
-                    <div class="overflow-hidden rounded-2">
-                        <img src="imags/stadium.png" class=" card-img-top" alt="">
-                    </div>
-                    <div class="card-body">
-                        <h4 class="fw-bolder">Almasa Staduim</h4>
-                        <h5 class="fw-bolder">Nasr City | Cairo</h5>
-                        <p class="m-0 fw-bolder"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> <span>300</span> EGP</p>
-                        <button class="btn btn-outline-warning fw-bolder mt-3">Book Now</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 2 -->
-            <div class="col text-center">
-                <div class="card staduim-img p-4 rounded-2">
-                    <div class="overflow-hidden rounded-2">
-                        <img src="imags/stadium.png" class=" card-img-top" alt="">
-                    </div>
-                    <div class="card-body">
-                        <h4 class="fw-bolder">Almasa Staduim</h4>
-                        <h5 class="fw-bolder">Nasr City | Cairo</h5>
-                        <p class="m-0 fw-bolder"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> <span>300</span> EGP</p>
-                        <button class="btn btn-outline-warning fw-bolder mt-3">Book Now</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 3 -->
-            <div class="col text-center">
-                <div class="card staduim-img p-4 rounded-2">
-                    <div class="overflow-hidden rounded-2">
-                        <img src="imags/stadium.png" class=" card-img-top" alt="">
-                    </div>
-                    <div class="card-body">
-                        <h4 class="fw-bolder">Almasa Staduim</h4>
-                        <h5 class="fw-bolder">Nasr City | Cairo</h5>
-                        <p class="m-0 fw-bolder"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> <span>300</span> EGP</p>
-                        <button class="btn btn-outline-warning fw-bolder mt-3">Book Now</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 4 -->
-            <div class="col text-center">
-                <div class="card staduim-img p-4 rounded-2">
-                    <div class="overflow-hidden rounded-2">
-                        <img src="imags/stadium.png" class=" card-img-top" alt="">
-                    </div>
-                    <div class="card-body">
-                        <h4 class="fw-bolder">Almasa Staduim</h4>
-                        <h5 class="fw-bolder">Nasr City | Cairo</h5>
-                        <p class="m-0 fw-bolder"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> <span>300</span> EGP</p>
-                        <button class="btn btn-outline-warning fw-bolder mt-3">Book Now</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mb-4">
-            <!-- Card 1 -->
-            <div class="col text-center">
-                <div class="card staduim-img p-4 rounded-2">
-                    <div class="overflow-hidden rounded-2">
-                        <img src="imags/stadium.png" class=" card-img-top" alt="">
-                    </div>
-                    <div class="card-body">
-                        <h4 class="fw-bolder">Almasa Staduim</h4>
-                        <h5 class="fw-bolder">Nasr City | Cairo</h5>
-                        <p class="m-0 fw-bolder"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> <span>300</span> EGP</p>
-                        <button class="btn btn-outline-warning fw-bolder mt-3">Book Now</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 2 -->
-            <div class="col text-center">
-                <div class="card staduim-img p-4 rounded-2">
-                    <div class="overflow-hidden rounded-2">
-                        <img src="imags/stadium.png" class=" card-img-top" alt="">
-                    </div>
-                    <div class="card-body">
-                        <h4 class="fw-bolder">Almasa Staduim</h4>
-                        <h5 class="fw-bolder">Nasr City | Cairo</h5>
-                        <p class="m-0 fw-bolder"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> <span>300</span> EGP</p>
-                        <button class="btn btn-outline-warning fw-bolder mt-3">Book Now</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 3 -->
-            <div class="col text-center">
-                <div class="card staduim-img p-4 rounded-2">
-                    <div class="overflow-hidden rounded-2">
-                        <img src="imags/stadium.png" class=" card-img-top" alt="">
-                    </div>
-                    <div class="card-body">
-                        <h4 class="fw-bolder">Almasa Staduim</h4>
-                        <h5 class="fw-bolder">Nasr City | Cairo</h5>
-                        <p class="m-0 fw-bolder"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> <span>300</span> EGP</p>
-                        <button class="btn btn-outline-warning fw-bolder mt-3">Book Now</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 4 -->
-            <div class="col text-center">
-                <div class="card staduim-img p-4 rounded-2">
-                    <div class="overflow-hidden rounded-2">
-                        <img src="imags/stadium.png" class=" card-img-top" alt="">
-                    </div>
-                    <div class="card-body">
-                        <h4 class="fw-bolder">Almasa Staduim</h4>
-                        <h5 class="fw-bolder">Nasr City | Cairo</h5>
-                        <p class="m-0 fw-bolder"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> <span>300</span> EGP</p>
-                        <button class="btn btn-outline-warning fw-bolder mt-3">Book Now</button>
-                    </div>
-                </div>
-            </div>
+
         </div>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mb-4">
             <!-- Card 1 -->

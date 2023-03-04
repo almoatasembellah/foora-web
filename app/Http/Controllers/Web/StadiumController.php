@@ -37,7 +37,7 @@ class StadiumController extends Controller
      */
     public function show(Venue $venue)
     {
-        //
+        return view('stadium.show-details');
     }
 
     /**
