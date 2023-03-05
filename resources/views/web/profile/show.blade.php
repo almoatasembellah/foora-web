@@ -10,7 +10,6 @@
         .nab a.nav-link {
 
 
-
             color: #000000;
 
         }
@@ -27,7 +26,7 @@
                         <div>
                             <div class="d-flex justify-content-start ms-2">
                                 <img src="imags/profile.jpeg" id="photo" class="rounded-circle" alt=""
-                                     style="width: 80px; height: 80px;" />
+                                     style="width: 80px; height: 80px;"/>
                             </div>
                             <h5 class="fw-bolder mt-3">Mutasim Yasser</h5>
 
@@ -68,7 +67,8 @@
 
                             <h3 class="mb-4 fw-bolder">Player Info</h3>
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end ">
-                                <a href="{{ route('edit-profile') }}" class="btn btn-dark me-md-2" type="button">Edit profile</a>
+                                <a href="{{ route('edit-profile') }}" class="btn btn-dark me-md-2" type="button">Edit
+                                    profile</a>
 
                             </div>
                             <p class="text-muted">You can see the player's Skills here</p>
@@ -99,7 +99,8 @@
                                                 <h5 class="card-title">Age</h5>
                                             </div>
                                             <div class="col-6 col-md-3">
-                                                <p class="card-text text-muted"><i class='bx bx-detail display-6 'style='color:#f9800a'></i></p>
+                                                <p class="card-text text-muted"><i class='bx bx-detail display-6 '
+                                                                                   style='color:#f9800a'></i></p>
                                             </div>
                                         </div>
 
@@ -116,7 +117,8 @@
                                                 <h5 class="card-title">Weight</h5>
                                             </div>
                                             <div class="col-6 col-md-3">
-                                                <p class="card-text text-muted"><i class='bx bx-body display-6' style='color:#f9800a'></i></p>
+                                                <p class="card-text text-muted"><i class='bx bx-body display-6'
+                                                                                   style='color:#f9800a'></i></p>
                                             </div>
                                         </div>
 
@@ -133,7 +135,8 @@
                                                 <h5 class="card-title">Height</h5>
                                             </div>
                                             <div class="col-6 col-md-3">
-                                                <p class="card-text text-muted"><i class='bx bx-body display-6' style='color:#f9800a'></i></p>
+                                                <p class="card-text text-muted"><i class='bx bx-body display-6'
+                                                                                   style='color:#f9800a'></i></p>
                                             </div>
                                         </div>
 
@@ -157,7 +160,8 @@
                                                 <h5 class="card-title">Speed</h5>
                                             </div>
                                             <div class="col-6 col-md-3">
-                                                <p class="card-text text-muted"><i class='bx bx-run display-6' style='color:#ff9800' ></i></p>
+                                                <p class="card-text text-muted"><i class='bx bx-run display-6'
+                                                                                   style='color:#ff9800'></i></p>
                                             </div>
                                         </div>
 
@@ -174,7 +178,9 @@
                                                 <h5 class="card-title">Dribling</h5>
                                             </div>
                                             <div class="col-6 col-md-3">
-                                                <p class="card-text text-muted"><i class='bx bx-football bx-fade-up display-6' style='color:#ff9800' ></i></p>
+                                                <p class="card-text text-muted"><i
+                                                        class='bx bx-football bx-fade-up display-6'
+                                                        style='color:#ff9800'></i></p>
                                             </div>
                                         </div>
 
@@ -191,7 +197,9 @@
                                                 <h5 class="card-title">Shoot</h5>
                                             </div>
                                             <div class="col-6 col-md-3">
-                                                <p class="card-text text-muted"><i class='bx bx-football bx-fade-right display-6' style='color:#ff9800' ></i></p>
+                                                <p class="card-text text-muted"><i
+                                                        class='bx bx-football bx-fade-right display-6'
+                                                        style='color:#ff9800'></i></p>
                                             </div>
                                         </div>
 
@@ -208,7 +216,8 @@
                                                 <h5 class="card-title">Team</h5>
                                             </div>
                                             <div class="col-6 col-md-3">
-                                                <p class="card-text text-muted"><i class='bx bxs-group display-6'style='color:#ff9800'></i></p>
+                                                <p class="card-text text-muted"><i class='bx bxs-group display-6'
+                                                                                   style='color:#ff9800'></i></p>
                                             </div>
                                         </div>
 
@@ -224,149 +233,177 @@
 
                         <div class="row my-4">
                             <div class="row">
-                                <div class="card d-block my-1 mx-4"style="width: 20rem; height: 20rem;">
-                                    <img src="imags/background.jpg" class="card-img-top my-2" alt="...">
+                                <div class="card d-block my-1 mx-4" style="width: 20rem; height: 20rem;">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
                                     <div class="card-body fw-bolder px-1 my-2">
                                         <h6>Gohary Stadium</h6>
-                                        <h6 class="my-1"><i class='bx bxs-star' style='color:#ff9800'  ></i>6.5</h6>
-                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
-                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i>25 EGP</p>
+                                        <h6 class="my-1"><i class='bx bxs-star' style='color:#ff9800'></i>6.5</h6>
+                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429'></i> <span>2 Octoper,2023</span>
+                                            <span>|</span> <span>9:00 PM</span></p>
+                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'></i>25 EGP
+                                        </p>
                                     </div>
                                 </div>
-                                <div class="card d-block my-1 mx-4"style="width: 20rem; height: 20rem;">
-                                    <img src="imags/background.jpg" class="card-img-top my-2" alt="...">
+                                <div class="card d-block my-1 mx-4" style="width: 20rem; height: 20rem;">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
                                     <div class="card-body fw-bolder px-1 my-2">
                                         <h6>Gohary Stadium</h6>
-                                        <h6 class="my-1"><i class='bx bxs-star' style='color:#ff9800'  ></i>6.5</h6>
-                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
-                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i>25 EGP</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="card d-block my-1 mx-4"style="width: 20rem; height: 20rem;">
-                                    <img src="imags/background.jpg" class="card-img-top my-2" alt="...">
-                                    <div class="card-body fw-bolder px-1 my-2">
-                                        <h6>Gohary Stadium</h6>
-                                        <h6 class="my-1"><i class='bx bxs-star' style='color:#ff9800'  ></i>6.5</h6>
-                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
-                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i>25 EGP</p>
-                                    </div>
-                                </div>
-                                <div class="card d-block my-1 mx-4"style="width: 20rem; height: 20rem;">
-                                    <img src="imags/background.jpg" class="card-img-top my-2" alt="...">
-                                    <div class="card-body fw-bolder px-1 my-2">
-                                        <h6>Gohary Stadium</h6>
-                                        <h6 class="my-1"><i class='bx bxs-star' style='color:#ff9800'  ></i>6.5</h6>
-                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
-                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i>25 EGP</p>
+                                        <h6 class="my-1"><i class='bx bxs-star' style='color:#ff9800'></i>6.5</h6>
+                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429'></i> <span>2 Octoper,2023</span>
+                                            <span>|</span> <span>9:00 PM</span></p>
+                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'></i>25 EGP
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="card d-block my-1 mx-4"style="width: 20rem; height: 20rem;">
-                                    <img src="imags/background.jpg" class="card-img-top my-2" alt="...">
+                                <div class="card d-block my-1 mx-4" style="width: 20rem; height: 20rem;">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
                                     <div class="card-body fw-bolder px-1 my-2">
                                         <h6>Gohary Stadium</h6>
-                                        <h6 class="my-1"><i class='bx bxs-star' style='color:#ff9800'  ></i>6.5</h6>
-                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
-                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i>25 EGP</p>
+                                        <h6 class="my-1"><i class='bx bxs-star' style='color:#ff9800'></i>6.5</h6>
+                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429'></i> <span>2 Octoper,2023</span>
+                                            <span>|</span> <span>9:00 PM</span></p>
+                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'></i>25 EGP
+                                        </p>
                                     </div>
                                 </div>
-                                <div class="card d-block my-1 mx-4"style="width: 20rem; height: 20rem;">
-                                    <img src="imags/background.jpg" class="card-img-top my-2" alt="...">
+                                <div class="card d-block my-1 mx-4" style="width: 20rem; height: 20rem;">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
                                     <div class="card-body fw-bolder px-1 my-2">
                                         <h6>Gohary Stadium</h6>
-                                        <h6 class="my-1"><i class='bx bxs-star' style='color:#ff9800'  ></i>6.5</h6>
-                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
-                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i>25 EGP</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="card d-block my-1 mx-4"style="width: 20rem; height: 20rem;">
-                                    <img src="imags/background.jpg" class="card-img-top my-2" alt="...">
-                                    <div class="card-body fw-bolder px-1 my-2">
-                                        <h6>Gohary Stadium</h6>
-                                        <h6 class="my-1"><i class='bx bxs-star' style='color:#ff9800'  ></i>6.5</h6>
-                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
-                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i>25 EGP</p>
-                                    </div>
-                                </div>
-                                <div class="card d-block my-1 mx-4"style="width: 20rem; height: 20rem;">
-                                    <img src="imags/background.jpg" class="card-img-top my-2" alt="...">
-                                    <div class="card-body fw-bolder px-1 my-2">
-                                        <h6>Gohary Stadium</h6>
-                                        <h6 class="my-1"><i class='bx bxs-star' style='color:#ff9800'  ></i>6.5</h6>
-                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
-                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i>25 EGP</p>
+                                        <h6 class="my-1"><i class='bx bxs-star' style='color:#ff9800'></i>6.5</h6>
+                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429'></i> <span>2 Octoper,2023</span>
+                                            <span>|</span> <span>9:00 PM</span></p>
+                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'></i>25 EGP
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="card d-block my-1 mx-4"style="width: 20rem; height: 20rem;">
-                                    <img src="imags/background.jpg" class="card-img-top my-2" alt="...">
+                                <div class="card d-block my-1 mx-4" style="width: 20rem; height: 20rem;">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
                                     <div class="card-body fw-bolder px-1 my-2">
                                         <h6>Gohary Stadium</h6>
-                                        <h6 class="my-1"><i class='bx bxs-star' style='color:#ff9800'  ></i>6.5</h6>
-                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
-                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i>25 EGP</p>
+                                        <h6 class="my-1"><i class='bx bxs-star' style='color:#ff9800'></i>6.5</h6>
+                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429'></i> <span>2 Octoper,2023</span>
+                                            <span>|</span> <span>9:00 PM</span></p>
+                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'></i>25 EGP
+                                        </p>
                                     </div>
                                 </div>
-                                <div class="card d-block my-1 mx-4"style="width: 20rem; height: 20rem;">
-                                    <img src="imags/background.jpg" class="card-img-top my-2" alt="...">
+                                <div class="card d-block my-1 mx-4" style="width: 20rem; height: 20rem;">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
                                     <div class="card-body fw-bolder px-1 my-2">
                                         <h6>Gohary Stadium</h6>
-                                        <h6 class="my-1"><i class='bx bxs-star' style='color:#ff9800'  ></i>6.5</h6>
-                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
-                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i>25 EGP</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="card d-block my-1 mx-4"style="width: 20rem; height: 20rem;">
-                                    <img src="imags/background.jpg" class="card-img-top my-2" alt="...">
-                                    <div class="card-body fw-bolder px-1 my-2">
-                                        <h6>Gohary Stadium</h6>
-                                        <h6 class="my-1"><i class='bx bxs-star' style='color:#ff9800'  ></i>6.5</h6>
-                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
-                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i>25 EGP</p>
-                                    </div>
-                                </div>
-                                <div class="card d-block my-1 mx-4"style="width: 20rem; height: 20rem;">
-                                    <img src="imags/background.jpg" class="card-img-top my-2" alt="...">
-                                    <div class="card-body fw-bolder px-1 my-2">
-                                        <h6>Gohary Stadium</h6>
-                                        <h6 class="my-1"><i class='bx bxs-star' style='color:#ff9800'  ></i>6.5</h6>
-                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
-                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i>25 EGP</p>
+                                        <h6 class="my-1"><i class='bx bxs-star' style='color:#ff9800'></i>6.5</h6>
+                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429'></i> <span>2 Octoper,2023</span>
+                                            <span>|</span> <span>9:00 PM</span></p>
+                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'></i>25 EGP
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="card d-block my-1 mx-4"style="width: 20rem; height: 20rem;">
-                                    <img src="imags/background.jpg" class="card-img-top my-2" alt="...">
+                                <div class="card d-block my-1 mx-4" style="width: 20rem; height: 20rem;">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
                                     <div class="card-body fw-bolder px-1 my-2">
                                         <h6>Gohary Stadium</h6>
-                                        <h6 class="my-1"><i class='bx bxs-star' style='color:#ff9800'  ></i>6.5</h6>
-                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
-                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i>25 EGP</p>
+                                        <h6 class="my-1"><i class='bx bxs-star' style='color:#ff9800'></i>6.5</h6>
+                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429'></i> <span>2 Octoper,2023</span>
+                                            <span>|</span> <span>9:00 PM</span></p>
+                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'></i>25 EGP
+                                        </p>
                                     </div>
                                 </div>
-                                <div class="card d-block my-1 mx-4"style="width: 20rem; height: 20rem;">
-                                    <img src="imags/background.jpg" class="card-img-top my-2" alt="...">
+                                <div class="card d-block my-1 mx-4" style="width: 20rem; height: 20rem;">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2 " alt="...">
                                     <div class="card-body fw-bolder px-1 my-2">
                                         <h6>Gohary Stadium</h6>
-                                        <h6 class="my-1"><i class='bx bxs-star' style='color:#ff9800'  ></i>6.5</h6>
-                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
-                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i>25 EGP</p>
+                                        <h6 class="my-1"><i class='bx bxs-star' style='color:#ff9800'></i>6.5</h6>
+                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429'></i> <span>2 Octoper,2023</span>
+                                            <span>|</span> <span>9:00 PM</span></p>
+                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'></i>25 EGP
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="card d-block my-1 mx-4" style="width: 20rem; height: 20rem;">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
+                                    <div class="card-body fw-bolder px-1 my-2">
+                                        <h6>Gohary Stadium</h6>
+                                        <h6 class="my-1"><i class='bx bxs-star' style='color:#ff9800'></i>6.5</h6>
+                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429'></i> <span>2 Octoper,2023</span>
+                                            <span>|</span> <span>9:00 PM</span></p>
+                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'></i>25 EGP
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card d-block my-1 mx-4" style="width: 20rem; height: 20rem;">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
+                                    <div class="card-body fw-bolder px-1 my-2">
+                                        <h6>Gohary Stadium</h6>
+                                        <h6 class="my-1"><i class='bx bxs-star' style='color:#ff9800'></i>6.5</h6>
+                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429'></i> <span>2 Octoper,2023</span>
+                                            <span>|</span> <span>9:00 PM</span></p>
+                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'></i>25 EGP
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="card d-block my-1 mx-4" style="width: 20rem; height: 20rem;">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
+                                    <div class="card-body fw-bolder px-1 my-2">
+                                        <h6>Gohary Stadium</h6>
+                                        <h6 class="my-1"><i class='bx bxs-star' style='color:#ff9800'></i>6.5</h6>
+                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429'></i> <span>2 Octoper,2023</span>
+                                            <span>|</span> <span>9:00 PM</span></p>
+                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'></i>25 EGP
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card d-block my-1 mx-4" style="width: 20rem; height: 20rem;">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
+                                    <div class="card-body fw-bolder px-1 my-2">
+                                        <h6>Gohary Stadium</h6>
+                                        <h6 class="my-1"><i class='bx bxs-star' style='color:#ff9800'></i>6.5</h6>
+                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429'></i> <span>2 Octoper,2023</span>
+                                            <span>|</span> <span>9:00 PM</span></p>
+                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'></i>25 EGP
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="card d-block my-1 mx-4" style="width: 20rem; height: 20rem;">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
+                                    <div class="card-body fw-bolder px-1 my-2">
+                                        <h6>Gohary Stadium</h6>
+                                        <h6 class="my-1"><i class='bx bxs-star' style='color:#ff9800'></i>6.5</h6>
+                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429'></i> <span>2 Octoper,2023</span>
+                                            <span>|</span> <span>9:00 PM</span></p>
+                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'></i>25 EGP
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card d-block my-1 mx-4" style="width: 20rem; height: 20rem;">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
+                                    <div class="card-body fw-bolder px-1 my-2">
+                                        <h6>Gohary Stadium</h6>
+                                        <h6 class="my-1"><i class='bx bxs-star' style='color:#ff9800'></i>6.5</h6>
+                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429'></i> <span>2 Octoper,2023</span>
+                                            <span>|</span> <span>9:00 PM</span></p>
+                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'></i>25 EGP
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
 
-                        </div>
                     </div>
                 </div>
+            </div>
 @endsection
