@@ -26,13 +26,13 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link {{ !Route::is('admin.roles') ? 'collapsed' : '' }}" href="#">
+            <a class="nav-link {{ !Route::is('admin.roles.index') ? 'collapsed' : '' }}" href="{{ route('admin.roles.index') }}">
                 <i class="bi bi-grid"></i>
                 <span>Roles</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link {{ !Route::is('admin.roles') ? 'collapsed' : '' }}" href="#">
+            <a class="nav-link {{ !Route::is('admin.games.index') ? 'collapsed' : '' }}" href="{{ route('admin.games.index') }}">
                 <i class="bi bi-grid"></i>
                 <span>Games</span>
             </a>

@@ -18,7 +18,8 @@ class GameRequest extends FormRequest
             'time' => 'required',
             'city_id' => ['required' , Rule::exists('cities' , 'id')],
             'area_id' => ['required' , Rule::exists('areas' , 'id')],
-            'location_url' => 'required|url'
+            'location_url' => 'required|url',
+            'type' => ['required' , 'numeric' , Rule::in([1,2])]
         ];
     }
 

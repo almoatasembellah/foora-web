@@ -14,7 +14,7 @@ class GameResource extends JsonResource
             'id' => $this['id'],
             'venue_name' => $this['name'],
             'phone' => $this['phone'],
-            'number_of_players' => $this['number_of_players'],
+            'players_number' => $this['players_number'],
             'price' => $this['price'],
             'date'  => $this['date'],
             'time' => $this['time'],
@@ -22,7 +22,7 @@ class GameResource extends JsonResource
             'area' => $this['area']['name'],
             'user' => UserResource::make($this['user']),
             'location' => $this['location_url'],
-            'joined_players' => getJoinedPlayersCount($this['id'])
+            'joined_players_count' => getJoinedPlayersCount($this['id'])
         ];
     }
 }

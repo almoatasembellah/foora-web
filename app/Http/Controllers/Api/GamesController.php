@@ -25,7 +25,7 @@ class GamesController extends Controller
             })->get();
         return $this->sendResponse(GameResource::collection($games) , 'Game list is fetched successfully');
     }
-    public function getRequestedGames(Request $request)
+    public function getCreatedGames(Request $request)
     {
         $games = Game::where('user_id' , $request->user()->id)->get();
         return $this->sendResponse(GameResource::collection($games) , 'Game list is fetched successfully');
