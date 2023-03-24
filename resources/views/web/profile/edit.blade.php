@@ -85,12 +85,7 @@
                                     <input type="text" class="form-control" value="Mutasim Yasser" placeholder="type the new name">
                                 </div>
                             </div>
-                            <!-- <div class="col-md-6">
-                                <div class="form-group">
-                                      <label>Email Address</label>
-                                      <input type="email" class="form-control" value="mutasim0@gmail.com">
-                                </div>
-                            </div> -->
+
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Email Address</label>
@@ -163,7 +158,7 @@
                         <div class="row">
                             <div class="row">
                                 <div class="card d-block my-1 mx-4"style="width: 22rem; height: 24rem;">
-                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2 alt="...">
                                     <div class="card-body fw-bolder px-1">
                                         <h6>Gohary Stadium</h6>
                                         <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
@@ -179,41 +174,7 @@
                                     </div>
                                 </div>
                                 <div class="card d-block my-1 mx-4"style="width: 22rem; height: 24rem;">
-                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
-                                    <div class="card-body fw-bolder px-1">
-                                        <h6>Gohary Stadium</h6>
-                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
-                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> 25 EGP</p>
-                                        <p><i class='bx bxs-user' style='color:#0a1429' ></i> <span>2</span> <span>/</span> <span>5</span> <span>Players</span></p>
-
-                                        <div class="my-3">
-                                            <a href="#" class="btn btn-warning mx-2" data-bs-toggle="modal" data-bs-target="#edit-request"
-                                               data-bs-whatever="">Edit Request</a>
-                                            <a href="#" data-bs-toggle="modal" data-bs-target="#cancel-request"
-                                               data-bs-whatever="" class="btn btn-danger mx-2">Cancel Request</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="card d-block my-1 mx-4"style="width: 22rem; height: 24rem;">
-                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
-                                    <div class="card-body fw-bolder px-1">
-                                        <h6>Gohary Stadium</h6>
-                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
-                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> 25 EGP</p>
-                                        <p><i class='bx bxs-user' style='color:#0a1429' ></i> <span>2</span> <span>/</span> <span>5</span> <span>Players</span></p>
-
-                                        <div class="my-3">
-                                            <a href="#" class="btn btn-warning mx-2" data-bs-toggle="modal" data-bs-target="#edit-request"
-                                               data-bs-whatever="">Edit Request</a>
-                                            <a href="#" data-bs-toggle="modal" data-bs-target="#cancel-request"
-                                               data-bs-whatever="" class="btn btn-danger mx-2">Cancel Request</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card d-block my-1 mx-4"style="width: 22rem; height: 24rem;">
-                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2 alt="...">
                                     <div class="card-body fw-bolder px-1">
                                         <h6>Gohary Stadium</h6>
                                         <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
@@ -231,7 +192,7 @@
                             </div>
                             <div class="row">
                                 <div class="card d-block my-1 mx-4"style="width: 22rem; height: 24rem;">
-                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2 alt="...">
                                     <div class="card-body fw-bolder px-1">
                                         <h6>Gohary Stadium</h6>
                                         <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
@@ -247,41 +208,7 @@
                                     </div>
                                 </div>
                                 <div class="card d-block my-1 mx-4"style="width: 22rem; height: 24rem;">
-                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
-                                    <div class="card-body fw-bolder px-1">
-                                        <h6>Gohary Stadium</h6>
-                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
-                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> 25 EGP</p>
-                                        <p><i class='bx bxs-user' style='color:#0a1429' ></i> <span>2</span> <span>/</span> <span>5</span> <span>Players</span></p>
-
-                                        <div class="my-3">
-                                            <a href="#" class="btn btn-warning mx-2" data-bs-toggle="modal" data-bs-target="#edit-request"
-                                               data-bs-whatever="">Edit Request</a>
-                                            <a href="#" data-bs-toggle="modal" data-bs-target="#cancel-request"
-                                               data-bs-whatever="" class="btn btn-danger mx-2">Cancel Request</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="card d-block my-1 mx-4"style="width: 22rem; height: 24rem;">
-                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
-                                    <div class="card-body fw-bolder px-1">
-                                        <h6>Gohary Stadium</h6>
-                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
-                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> 25 EGP</p>
-                                        <p><i class='bx bxs-user' style='color:#0a1429' ></i> <span>2</span> <span>/</span> <span>5</span> <span>Players</span></p>
-
-                                        <div class="my-3">
-                                            <a href="#" class="btn btn-warning mx-2" data-bs-toggle="modal" data-bs-target="#edit-request"
-                                               data-bs-whatever="">Edit Request</a>
-                                            <a href="#" data-bs-toggle="modal" data-bs-target="#cancel-request"
-                                               data-bs-whatever="" class="btn btn-danger mx-2">Cancel Request</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card d-block my-1 mx-4"style="width: 22rem; height: 24rem;">
-                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2 alt="...">
                                     <div class="card-body fw-bolder px-1">
                                         <h6>Gohary Stadium</h6>
                                         <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
@@ -299,7 +226,7 @@
                             </div>
                             <div class="row">
                                 <div class="card d-block my-1 mx-4"style="width: 22rem; height: 24rem;">
-                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2 alt="...">
                                     <div class="card-body fw-bolder px-1">
                                         <h6>Gohary Stadium</h6>
                                         <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
@@ -315,7 +242,75 @@
                                     </div>
                                 </div>
                                 <div class="card d-block my-1 mx-4"style="width: 22rem; height: 24rem;">
-                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2 alt="...">
+                                    <div class="card-body fw-bolder px-1">
+                                        <h6>Gohary Stadium</h6>
+                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
+                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> 25 EGP</p>
+                                        <p><i class='bx bxs-user' style='color:#0a1429' ></i> <span>2</span> <span>/</span> <span>5</span> <span>Players</span></p>
+
+                                        <div class="my-3">
+                                            <a href="#" class="btn btn-warning mx-2" data-bs-toggle="modal" data-bs-target="#edit-request"
+                                               data-bs-whatever="">Edit Request</a>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#cancel-request"
+                                               data-bs-whatever="" class="btn btn-danger mx-2">Cancel Request</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="card d-block my-1 mx-4"style="width: 22rem; height: 24rem;">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2 alt="...">
+                                    <div class="card-body fw-bolder px-1">
+                                        <h6>Gohary Stadium</h6>
+                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
+                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> 25 EGP</p>
+                                        <p><i class='bx bxs-user' style='color:#0a1429' ></i> <span>2</span> <span>/</span> <span>5</span> <span>Players</span></p>
+
+                                        <div class="my-3">
+                                            <a href="#" class="btn btn-warning mx-2" data-bs-toggle="modal" data-bs-target="#edit-request"
+                                               data-bs-whatever="">Edit Request</a>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#cancel-request"
+                                               data-bs-whatever="" class="btn btn-danger mx-2">Cancel Request</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card d-block my-1 mx-4"style="width: 22rem; height: 24rem;">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2 alt="...">
+                                    <div class="card-body fw-bolder px-1">
+                                        <h6>Gohary Stadium</h6>
+                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
+                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> 25 EGP</p>
+                                        <p><i class='bx bxs-user' style='color:#0a1429' ></i> <span>2</span> <span>/</span> <span>5</span> <span>Players</span></p>
+
+                                        <div class="my-3">
+                                            <a href="#" class="btn btn-warning mx-2" data-bs-toggle="modal" data-bs-target="#edit-request"
+                                               data-bs-whatever="">Edit Request</a>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#cancel-request"
+                                               data-bs-whatever="" class="btn btn-danger mx-2">Cancel Request</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="card d-block my-1 mx-4"style="width: 22rem; height: 24rem;">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2 alt="...">
+                                    <div class="card-body fw-bolder px-1">
+                                        <h6>Gohary Stadium</h6>
+                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
+                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> 25 EGP</p>
+                                        <p><i class='bx bxs-user' style='color:#0a1429' ></i> <span>2</span> <span>/</span> <span>5</span> <span>Players</span></p>
+
+                                        <div class="my-3">
+                                            <a href="#" class="btn btn-warning mx-2" data-bs-toggle="modal" data-bs-target="#edit-request"
+                                               data-bs-whatever="">Edit Request</a>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#cancel-request"
+                                               data-bs-whatever="" class="btn btn-danger mx-2">Cancel Request</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card d-block my-1 mx-4"style="width: 22rem; height: 24rem;">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2 alt="...">
                                     <div class="card-body fw-bolder px-1">
                                         <h6>Gohary Stadium</h6>
                                         <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
@@ -472,7 +467,7 @@
                         <div class="row">
                             <div class="row">
                                 <div class="card d-block my-1 mx-4"style="width: 22rem; height: 24rem;">
-                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2 alt="...">
                                     <div class="card-body fw-bolder px-1">
                                         <h6>Gohary Stadium</h6>
                                         <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
@@ -486,37 +481,7 @@
                                     </div>
                                 </div>
                                 <div class="card d-block my-1 mx-4"style="width: 22rem; height: 24rem;">
-                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
-                                    <div class="card-body fw-bolder px-1">
-                                        <h6>Gohary Stadium</h6>
-                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
-                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> 25 EGP</p>
-                                        <p><i class='bx bxs-user' style='color:#0a1429' ></i> <span>2</span> <span>/</span> <span>5</span> <span>Players</span></p>
-
-                                        <div class="my-3">
-                                            <a href="#" data-bs-toggle="modal" data-bs-target="#cancel-joined-request"
-                                               data-bs-whatever="" class="btn btn-danger mx-2">Cancel Request</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="card d-block my-1 mx-4"style="width: 22rem; height: 24rem;">
-                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
-                                    <div class="card-body fw-bolder px-1">
-                                        <h6>Gohary Stadium</h6>
-                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
-                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> 25 EGP</p>
-                                        <p><i class='bx bxs-user' style='color:#0a1429' ></i> <span>2</span> <span>/</span> <span>5</span> <span>Players</span></p>
-
-                                        <div class="my-3">
-                                            <a href="#" data-bs-toggle="modal" data-bs-target="#cancel-joined-request"
-                                               data-bs-whatever="" class="btn btn-danger mx-2">Cancel Request</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card d-block my-1 mx-4"style="width: 22rem; height: 24rem;">
-                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2 alt="...">
                                     <div class="card-body fw-bolder px-1">
                                         <h6>Gohary Stadium</h6>
                                         <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
@@ -532,7 +497,7 @@
                             </div>
                             <div class="row">
                                 <div class="card d-block my-1 mx-4"style="width: 22rem; height: 24rem;">
-                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2 alt="...">
                                     <div class="card-body fw-bolder px-1">
                                         <h6>Gohary Stadium</h6>
                                         <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
@@ -546,37 +511,7 @@
                                     </div>
                                 </div>
                                 <div class="card d-block my-1 mx-4"style="width: 22rem; height: 24rem;">
-                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
-                                    <div class="card-body fw-bolder px-1">
-                                        <h6>Gohary Stadium</h6>
-                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
-                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> 25 EGP</p>
-                                        <p><i class='bx bxs-user' style='color:#0a1429' ></i> <span>2</span> <span>/</span> <span>5</span> <span>Players</span></p>
-
-                                        <div class="my-3">
-                                            <a href="#" data-bs-toggle="modal" data-bs-target="#cancel-joined-request"
-                                               data-bs-whatever="" class="btn btn-danger mx-2">Cancel Request</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="card d-block my-1 mx-4"style="width: 22rem; height: 24rem;">
-                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
-                                    <div class="card-body fw-bolder px-1">
-                                        <h6>Gohary Stadium</h6>
-                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
-                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> 25 EGP</p>
-                                        <p><i class='bx bxs-user' style='color:#0a1429' ></i> <span>2</span> <span>/</span> <span>5</span> <span>Players</span></p>
-
-                                        <div class="my-3">
-                                            <a href="#" data-bs-toggle="modal" data-bs-target="#cancel-joined-request"
-                                               data-bs-whatever="" class="btn btn-danger mx-2">Cancel Request</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card d-block my-1 mx-4"style="width: 22rem; height: 24rem;">
-                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2 alt="...">
                                     <div class="card-body fw-bolder px-1">
                                         <h6>Gohary Stadium</h6>
                                         <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
@@ -592,7 +527,7 @@
                             </div>
                             <div class="row">
                                 <div class="card d-block my-1 mx-4"style="width: 22rem; height: 24rem;">
-                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2 alt="...">
                                     <div class="card-body fw-bolder px-1">
                                         <h6>Gohary Stadium</h6>
                                         <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
@@ -606,7 +541,67 @@
                                     </div>
                                 </div>
                                 <div class="card d-block my-1 mx-4"style="width: 22rem; height: 24rem;">
-                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2" alt="...">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2 alt="...">
+                                    <div class="card-body fw-bolder px-1">
+                                        <h6>Gohary Stadium</h6>
+                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
+                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> 25 EGP</p>
+                                        <p><i class='bx bxs-user' style='color:#0a1429' ></i> <span>2</span> <span>/</span> <span>5</span> <span>Players</span></p>
+
+                                        <div class="my-3">
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#cancel-joined-request"
+                                               data-bs-whatever="" class="btn btn-danger mx-2">Cancel Request</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="card d-block my-1 mx-4"style="width: 22rem; height: 24rem;">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2 alt="...">
+                                    <div class="card-body fw-bolder px-1">
+                                        <h6>Gohary Stadium</h6>
+                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
+                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> 25 EGP</p>
+                                        <p><i class='bx bxs-user' style='color:#0a1429' ></i> <span>2</span> <span>/</span> <span>5</span> <span>Players</span></p>
+
+                                        <div class="my-3">
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#cancel-joined-request"
+                                               data-bs-whatever="" class="btn btn-danger mx-2">Cancel Request</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card d-block my-1 mx-4"style="width: 22rem; height: 24rem;">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2  alt="...">
+                                    <div class="card-body fw-bolder px-1">
+                                        <h6>Gohary Stadium</h6>
+                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
+                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> 25 EGP</p>
+                                        <p><i class='bx bxs-user' style='color:#0a1429' ></i> <span>2</span> <span>/</span> <span>5</span> <span>Players</span></p>
+
+                                        <div class="my-3">
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#cancel-joined-request"
+                                               data-bs-whatever="" class="btn btn-danger mx-2">Cancel Request</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="card d-block my-1 mx-4"style="width: 22rem; height: 24rem;">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2 alt="...">
+                                    <div class="card-body fw-bolder px-1">
+                                        <h6>Gohary Stadium</h6>
+                                        <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>
+                                        <p class="my-1"><i class='bx bxs-dollar-circle' style='color:#32aa37'  ></i> 25 EGP</p>
+                                        <p><i class='bx bxs-user' style='color:#0a1429' ></i> <span>2</span> <span>/</span> <span>5</span> <span>Players</span></p>
+
+                                        <div class="my-3">
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#cancel-joined-request"
+                                               data-bs-whatever="" class="btn btn-danger mx-2">Cancel Request</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card d-block my-1 mx-4"style="width: 22rem; height: 24rem;">
+                                    <img src={{asset("img/background.jpg")}} class="card-img-top my-2 alt="...">
                                     <div class="card-body fw-bolder px-1">
                                         <h6>Gohary Stadium</h6>
                                         <p class="my-1"><i class='bx bxs-watch' style='color:#0a1429' ></i> <span>2 Octoper,2023</span> <span>|</span> <span>9:00 PM</span></p>

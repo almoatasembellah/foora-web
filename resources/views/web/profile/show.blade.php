@@ -85,7 +85,7 @@
                                             </div>
                                         </div>
 
-                                        <p class="card-text text-muted">Mutasim Yasser</p>
+                                        <p class="card-text text-muted">{{Auth::user()->name}}</p>
                                     </div>
 
                                 </div>
@@ -104,7 +104,7 @@
                                             </div>
                                         </div>
 
-                                        <p class="card-text text-muted">22</p>
+                                        <p class="card-text text-muted">{{Auth::user()->age}}</p>
                                     </div>
 
                                 </div>
@@ -122,7 +122,7 @@
                                             </div>
                                         </div>
 
-                                        <p class="card-text text-muted">70</p>
+                                        <p class="card-text text-muted">{{Auth::user()->weight}}</p>
                                     </div>
 
                                 </div>
@@ -140,7 +140,7 @@
                                             </div>
                                         </div>
 
-                                        <p class="card-text text-muted">180</p>
+                                        <p class="card-text text-muted">{{Auth::user()->height}}</p>
                                     </div>
 
                                 </div>
