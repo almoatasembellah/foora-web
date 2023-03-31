@@ -25,6 +25,7 @@ if (!function_exists('geJoinGameStatus')) {
             0 => JoinStatus::PENDING_TEXT,
             1 => JoinStatus::APPROVED_TEXT,
             2 => JoinStatus::REJECTED_TEXT,
+            default => 'unknown',
         };
     }
 }
