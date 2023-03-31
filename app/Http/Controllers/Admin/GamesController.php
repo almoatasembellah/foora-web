@@ -3,10 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\GameRequest;
-use App\Http\Resources\GameResource;
+use App\Http\Requests\Game\GameRequest;
 use App\Models\Game;
-use Illuminate\Http\Request;
 
 class GamesController extends Controller
 {

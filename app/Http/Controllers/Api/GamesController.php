@@ -3,7 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\GameRequest;
+use App\Http\Requests\Game\GameRequest;
+use App\Http\Requests\Game\UpdateGameRequest;
 use App\Http\Requests\SearchGameRequest;
 use App\Http\Resources\GameResource;
 use App\Http\Traits\HandleApi;
@@ -44,11 +45,11 @@ class GamesController extends Controller
     }
 
 
-    public function update(GameRequest $request,$id)
+    public function update(UpdateGameRequest $request,$id)
     {
         $game = Game::where(['id' => $id , 'user_id' => $request->user()->id])->first();
         if ($game ){
-        $game->update($request->all());
+        $game->update($request->validated());
         return $this->sendResponse([],"Game updated successfully");
         }
         return $this->sendError("Game Update Error", "Game Not Found");

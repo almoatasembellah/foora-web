@@ -20,9 +20,10 @@ class JoinsResource extends JsonResource
             'time' => $this['game']['time'],
             'city' => $this['game']['city']['name'],
             'area' => $this['game']['area']['name'],
-            'user' => UserResource::make($this['game']['user']),
+            'creator' => UserResource::make($this['game']['user']),
             'location' => $this['game']['location_url'],
-            'status' => geJoinGameStatus($this['status'])
+            'status' => geJoinGameStatus($this['status']),
+            'player' => UserResource::make($this['user'])
         ];
     }
 }

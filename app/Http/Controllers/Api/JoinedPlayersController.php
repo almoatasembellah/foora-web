@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Constants\JoinStatus;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ChangeJoinStatusRequest;
 use App\Http\Requests\JoinGameRequest;
@@ -24,30 +25,29 @@ class JoinedPlayersController extends Controller
     public function joinGame(JoinGameRequest $request)
     {
         $isAlreadyJoinGame = (bool)JoinedPlayer::where(['user_id' => $request->user()->id, 'game_id' => $request->get('game_id')])->first();
-        $gameCreator = Game::where(['user_id' => $request->user()->id, 'id' => $request->get('game_id')])->first();
-        if ($gameCreator) {
-            return $this->sendError("Game join Error", 'You can\'t join this game');
-        }
+        $playersNeededCount = Game::where('id' , $request->get('game_id'))->value('players_number');
+        $joinedPlayersCount = JoinedPlayer::where( 'game_id' , $request->get('game_id'))->count();
+
         if (!$isAlreadyJoinGame) {
-            JoinedPlayer::create([
-                'user_id' => $request->user()->id,
-                'game_id' => $request->get('game_id')
-            ]);
-            return $this->sendResponse([], "Game is joined successfully");
+           if ($playersNeededCount < $joinedPlayersCount){
+               JoinedPlayer::create([
+                   'user_id' => $request->user()->id,
+                   'game_id' => $request->get('game_id')
+               ]);
+               return $this->sendResponse([], "Game is joined successfully");
+           }else{
+               return $this->sendError("Game join Error", "You can\'t join this game");
+           }
         }
         return $this->sendError("Game join Error", "Game is already joined");
     }
 
-    public function getGameJoins(Request $request, $gameId)
+    public function getGameJoins(Request $request)
     {
-        $game = Game::where('id', $gameId)->first();
-        if ($game->user_id !== $request->user()->id) {
-            $joinedGames = JoinedPlayer::with('game')->where(['game_id' => $gameId, 'user_id' => $request->user()->id])->get();
-            return $this->sendResponse(['games' => JoinsResource::collection($joinedGames)], "All Joined Games are fetched successfully");
 
-        }
-        $joinedPlayers = JoinedPlayer::with(['user', 'game'])->where('game_id', $gameId)->get();
-        return $this->sendResponse(['game' => GameResource::make($game), 'players' => JoinedPlayersResource::collection($joinedPlayers)], "All Joins on your game is fetched successfully");
+        $games = Game::where('user_id' , $request->user()->id)->get();
+        $joinedGames = JoinedPlayer::with(['game' , 'user'])->whereIn('game_id' , $games->pluck('id'))->where('status' , JoinStatus::PENDING)->get();
+        return $this->sendResponse(JoinsResource::collection($joinedGames), "All Joined Games are fetched successfully");
 
     }
 

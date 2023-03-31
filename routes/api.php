@@ -30,15 +30,14 @@ Route::group(['middleware' => 'auth:sanctum'], static function () {
     Route::get('profile', [ProfileController::class, 'show']);
     Route::delete('delete-profile-image', [ProfileController::class, 'deleteProfileImage']);
 
-    Route::post('search-games', [GamesController::class, 'searchGames']);
-    Route::get('get-created-games', [GamesController::class, 'getCreatedGames']);
+
     Route::post('create-game', [GamesController::class, 'createGame']);
     Route::put('update-game/{id}', [GamesController::class, 'update']);
     Route::delete('delete-game/{id}', [GamesController::class, 'destroy']);
-
-
+    Route::post('search-games', [GamesController::class, 'searchGames']);
+    Route::get('get-created-games', [GamesController::class, 'getCreatedGames']);
     Route::post('join-game', [JoinedPlayersController::class, 'joinGame']);
-    Route::get('game/{id}/joins', [JoinedPlayersController::class, 'getGameJoins']);
+    Route::get('get-all-joins', [JoinedPlayersController::class, 'getGameJoins']);
     Route::post('game/join/change-status', [JoinedPlayersController::class, 'changeStatus']);
 });
 
