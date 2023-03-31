@@ -27,9 +27,8 @@ class JoinedPlayersController extends Controller
         $isAlreadyJoinGame = (bool)JoinedPlayer::where(['user_id' => $request->user()->id, 'game_id' => $request->get('game_id')])->first();
         $playersNeededCount = Game::where('id' , $request->get('game_id'))->value('players_number');
         $joinedPlayersCount = JoinedPlayer::where( 'game_id' , $request->get('game_id'))->count();
-
         if (!$isAlreadyJoinGame) {
-           if ($playersNeededCount < $joinedPlayersCount){
+           if ($joinedPlayersCount < $playersNeededCount){
                JoinedPlayer::create([
                    'user_id' => $request->user()->id,
                    'game_id' => $request->get('game_id')
