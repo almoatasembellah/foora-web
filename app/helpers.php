@@ -21,7 +21,7 @@ if (!function_exists('getJoinedPlayersData')) {
 if (!function_exists('geJoinGameStatus')) {
     function geJoinGameStatus($status): string
     {
-        return match ($status) {
+        return match ((int)$status) {
             0 => JoinStatus::PENDING_TEXT,
             1 => JoinStatus::APPROVED_TEXT,
             2 => JoinStatus::REJECTED_TEXT,
