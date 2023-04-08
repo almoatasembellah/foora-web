@@ -1,8 +1,10 @@
 <?php
 
 use App\Constants\JoinStatus;
+use App\Http\Resources\JoinedPlayersResource;
 use App\Models\JoinedPlayer;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 if (!function_exists('getJoinedPlayersCount')) {
     function getJoinedPlayersCount($gameId): int
@@ -27,5 +29,13 @@ if (!function_exists('geJoinGameStatus')) {
             2 => JoinStatus::REJECTED_TEXT,
             default => 'unknown',
         };
+    }
+}
+
+
+if (!function_exists('getApprovedPlayers')) {
+    function getApprovedPlayers($gameId): AnonymousResourceCollection
+    {
+        return JoinedPlayersResource::collection(JoinedPlayer::with('user')->where('game_id' ,$gameId)->where('status' , JoinStatus::APPROVED)->get());
     }
 }

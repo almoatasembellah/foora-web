@@ -22,7 +22,8 @@ class GameResource extends JsonResource
             'area' => $this['area']['name'],
             'user' => UserResource::make($this['user']),
             'location' => $this['location_url'],
-            'joined_players_count' => getJoinedPlayersCount($this['id'])
+            'joined_players_count' => getJoinedPlayersCount($this['id']),
+            'accepted_players' => getApprovedPlayers($this['id']),
         ];
     }
 }
