@@ -39,6 +39,9 @@ Route::group(['middleware' => 'auth:sanctum'], static function () {
     Route::post('join-game', [JoinedPlayersController::class, 'joinGame']);
     Route::get('get-all-joins', [JoinedPlayersController::class, 'getGameJoins']);
     Route::post('game/join/change-status', [JoinedPlayersController::class, 'changeStatus']);
+
+    Route::get('get-player-joined-games' , [JoinedPlayersController::class , 'getPlayerJoinedGames']);
+    Route::post('cancel-join' , [JoinedPlayersController::class , 'cancelJoin']);
 });
 
 Route::get('get-cities', [GeneralController::class, 'getALlCities']);

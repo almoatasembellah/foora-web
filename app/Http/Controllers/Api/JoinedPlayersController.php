@@ -4,18 +4,14 @@ namespace App\Http\Controllers\Api;
 
 use App\Constants\JoinStatus;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CancelJoinRequest;
 use App\Http\Requests\ChangeJoinStatusRequest;
 use App\Http\Requests\JoinGameRequest;
-use App\Http\Resources\Api\UserResource;
-use App\Http\Resources\GameJoinResource;
-use App\Http\Resources\JoinedPlayersResource;
-use App\Http\Resources\GameResource;
 use App\Http\Resources\JoinsResource;
 use App\Http\Traits\HandleApi;
 use App\Models\Game;
 use App\Models\JoinedPlayer;
 use Illuminate\Http\Request;
-use function GuzzleHttp\Promise\all;
 
 
 class JoinedPlayersController extends Controller
@@ -54,10 +50,6 @@ class JoinedPlayersController extends Controller
     {
         $game = Game::where('id', $request->get('game_id'))->first();
         if ($game->user_id == $request->user()->id) {
-            if ($request->get('status') == 1) {
-                $game->players_number = $game->players_number - 1;
-                $game->save();
-            }
 
             JoinedPlayer::where(['game_id' => $request->get('game_id'), 'user_id' => $request->get('user_id')])->update([
                 'status' => $request->get('status')
@@ -65,5 +57,17 @@ class JoinedPlayersController extends Controller
             return $this->sendResponse([], "Join Status is changed successfully");
         }
         return $this->sendError("Game join Error", 'You don\'t have permission to change join status');
+    }
+
+    public function getPlayerJoinedGames(Request $request)
+    {
+        $joinedGames = JoinedPlayer::with(['game' , 'user'])->where('user_id' , $request->user()->id)->where('status' , JoinStatus::APPROVED)->get();
+        return $this->sendResponse(JoinsResource::collection($joinedGames), "All Joined Games are fetched successfully");
+    }
+
+    public function cancelJoin(CancelJoinRequest $request)
+    {
+        JoinedPlayer::where(['user_id' => $request->get('user_id'), 'game_id' => $request->get('game_id')])->delete();
+        return $this->sendResponse([], "Join is cancelled successfully");
     }
 }
