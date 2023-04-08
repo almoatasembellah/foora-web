@@ -53,7 +53,7 @@ class JoinedPlayersController extends Controller
     public function changeStatus(ChangeJoinStatusRequest $request)
     {
         $game = Game::where('id', $request->get('game_id'))->first();
-        if ($game->user_id === $request->user()->id) {
+        if ($game->user_id == $request->user()->id) {
             if ($request->get('status') == 1) {
                 $game->players_number = $game->players_number - 1;
                 $game->save();
