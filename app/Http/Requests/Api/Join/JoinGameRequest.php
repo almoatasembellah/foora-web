@@ -1,15 +1,16 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Api\Join;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
-class UploadImageRequest extends FormRequest
+class JoinGameRequest extends FormRequest
 {
     public function rules(): array
     {
         return [
-            'profile_image' => ['required' , 'image']
+            'game_id' => ['required' , Rule::exists('games' , 'id')],
         ];
     }
 

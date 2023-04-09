@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Game;
+namespace App\Http\Requests\Api\Game;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Validation\Rule;
 
-class GameRequest extends FormRequest
+class UpdateGameRequest extends FormRequest
 {
     public function rules(): array
     {
@@ -16,10 +15,7 @@ class GameRequest extends FormRequest
             'price' => 'required|numeric',
             'date'  => 'required|date|date_format:Y-m-d',
             'time' => 'required',
-            'city_id' => ['required' , Rule::exists('cities' , 'id')],
-            'area_id' => ['required' , Rule::exists('areas' , 'id')],
             'location_url' => 'required|url',
-            'type' => ['required' , 'numeric' , Rule::in([1,2])]
         ];
     }
 

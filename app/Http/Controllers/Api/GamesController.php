@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Game\GameRequest;
-use App\Http\Requests\Game\UpdateGameRequest;
-use App\Http\Requests\SearchGameRequest;
+use App\Http\Requests\Api\Game\GameRequest;
+use App\Http\Requests\Api\Game\SearchGameRequest;
+use App\Http\Requests\Api\Game\UpdateGameRequest;
 use App\Http\Resources\Api\GameResource;
 use App\Http\Traits\HandleApi;
 use App\Models\Game;

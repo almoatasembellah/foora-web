@@ -4,9 +4,9 @@ namespace App\Http\Controllers\Api;
 
 use App\Constants\JoinStatus;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\CancelJoinRequest;
-use App\Http\Requests\ChangeJoinStatusRequest;
-use App\Http\Requests\JoinGameRequest;
+use App\Http\Requests\Api\Join\CancelJoinRequest;
+use App\Http\Requests\Api\Join\ChangeJoinStatusRequest;
+use App\Http\Requests\Api\Join\JoinGameRequest;
 use App\Http\Resources\Api\JoinsResource;
 use App\Http\Traits\HandleApi;
 use App\Models\Game;

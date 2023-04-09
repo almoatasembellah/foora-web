@@ -1,17 +1,16 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-class LoginRequest extends FormRequest
+class AdminLoginRequest extends FormRequest
 {
     public function rules(): array
     {
         return [
-
-            'email' => ['required' , 'email' , Rule::exists('users' , 'email')],
+            'email' => ['required' , 'email' , Rule::exists('admins' , 'email')],
 
             'password' => ['required' , 'min:8'],
         ];

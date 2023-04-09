@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\UpdateProfileRequest;
-use App\Http\Requests\UploadImageRequest;
+use App\Http\Requests\Api\Auth\UpdateProfileRequest;
+use App\Http\Requests\Api\Auth\UploadImageRequest;
 use App\Http\Resources\Api\UserResource;
 use App\Http\Traits\HandleApi;
 use Illuminate\Http\JsonResponse;

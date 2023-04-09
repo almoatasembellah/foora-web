@@ -1,18 +1,18 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Api\Join;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-class SearchGameRequest extends FormRequest
+class CancelJoinRequest extends FormRequest
 {
     public function rules(): array
     {
         return [
-            'city_id' => ['required' , Rule::exists('cities' , 'id')],
+            'game_id' => ['required' , Rule::exists('games' , 'id')],
+            'user_id' => ['required' , Rule::exists('users' , 'id')],
 
-            'area_id' => ['nullable' , Rule::exists('areas' , 'id')]
         ];
     }
 
