@@ -1,7 +1,7 @@
 <?php
 
 use App\Constants\JoinStatus;
-use App\Http\Resources\JoinedPlayersResource;
+use App\Http\Resources\Api\JoinedPlayersResource;
 use App\Models\JoinedPlayer;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
@@ -27,6 +27,30 @@ if (!function_exists('geJoinGameStatus')) {
             0 => JoinStatus::PENDING_TEXT,
             1 => JoinStatus::APPROVED_TEXT,
             2 => JoinStatus::REJECTED_TEXT,
+            default => 'unknown',
+        };
+    }
+}
+
+
+if (!function_exists('getStadiumType')) {
+    function getStadiumType($type): string
+    {
+        return match ((int)$type) {
+            0 => \App\Constants\StadiumType::FIVE_TEXT,
+            1 => \App\Constants\StadiumType::SEVEN_TEXT,
+            2 => \App\Constants\StadiumType::ELEVEN_TEXT,
+            default => 'unknown',
+        };
+    }
+}
+
+if (!function_exists('getStadiumGrossType')) {
+    function getStadiumGrossType($type): string
+    {
+        return match ((int)$type) {
+            0 => \App\Constants\StadiumGrossType::NATURAL_GRASS_TEXT,
+            1 => \App\Constants\StadiumGrossType::ARTIFICIAL_GRASS_TEXT,
             default => 'unknown',
         };
     }

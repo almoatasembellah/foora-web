@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Game\GameRequest;
 use App\Http\Requests\Game\UpdateGameRequest;
 use App\Http\Requests\SearchGameRequest;
-use App\Http\Resources\GameResource;
+use App\Http\Resources\Api\GameResource;
 use App\Http\Traits\HandleApi;
 use App\Models\Game;
 use Carbon\Carbon;

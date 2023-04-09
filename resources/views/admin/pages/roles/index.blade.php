@@ -149,7 +149,7 @@
                                         <div class="modal-body">
                                             {{ method_field('Delete') }}
                                             @csrf
-                                            <p class="my-1 text-danger">Are You sure you want to delete this City ?</p>
+                                            <p class="my-1 text-danger">Are You sure you want to delete this Role ?</p>
                                         </div>
 
                                         <div class="modal-footer">

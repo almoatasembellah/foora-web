@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\CancelJoinRequest;
 use App\Http\Requests\ChangeJoinStatusRequest;
 use App\Http\Requests\JoinGameRequest;
-use App\Http\Resources\JoinsResource;
+use App\Http\Resources\Api\JoinsResource;
 use App\Http\Traits\HandleApi;
 use App\Models\Game;
 use App\Models\JoinedPlayer;

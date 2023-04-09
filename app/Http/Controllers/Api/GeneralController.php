@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Resources\CityResource;
+use App\Http\Resources\Api\CityResource;
 use App\Http\Traits\HandleApi;
 use App\Models\Area;
 use App\Models\City;
