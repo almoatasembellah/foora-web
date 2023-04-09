@@ -6,6 +6,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ config('app.name') }}</title>
+    <!-- Favicons -->
+    <link href="{{ asset('img/football.svg') }}" rel="icon">
+    <link href="{{ asset('img/football.svg') }}" rel="apple-touch-icon">
     @include('admin.layouts.styles')
 </head>
 <body>
