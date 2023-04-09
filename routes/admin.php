@@ -1,12 +1,13 @@
 <?php
 
 use App\Http\Controllers\Admin\AreasController;
+use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\CitiesController;
 use App\Http\Controllers\Admin\GamesController;
 use App\Http\Controllers\Admin\HomeController;
-use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\RolesController;
 use App\Http\Controllers\Admin\StadiumController;
+use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -22,10 +23,12 @@ Route::group(['prefix' => 'auth', 'as' => 'auth.'], static function () {
 
 
 Route::group(['middleware' => ['is-admin']], static function () {
-    Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
+    Route::get('dashboard', [HomeController::class, 'index'])->name('dashboard');
     Route::resource('cities', CitiesController::class);
     Route::resource('areas', AreasController::class);
     Route::resource('roles', RolesController::class);
     Route::resource('games', GamesController::class);
     Route::resource('stadiums', StadiumController::class);
+    Route::resource('users', UserController::class);
+
 });

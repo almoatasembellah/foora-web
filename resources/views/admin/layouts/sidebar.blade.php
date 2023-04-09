@@ -39,7 +39,11 @@
             </a>
         </li>
 
-
+        <li class="nav-item">
+            <a class="nav-link {{ !Route::is('admin.users.index') ? 'collapsed' : '' }}" href="{{ route('admin.users.index') }}">
+                <span>Users</span>
+            </a>
+        </li>
 
     </ul>
 
