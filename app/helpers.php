@@ -63,3 +63,14 @@ if (!function_exists('getApprovedPlayers')) {
         return JoinedPlayersResource::collection(JoinedPlayer::with('user')->where('game_id' ,$gameId)->where('status' , JoinStatus::APPROVED)->get());
     }
 }
+
+if (!function_exists('getGameType')) {
+    function getGameType($type): string
+    {
+        return match ((int)$type) {
+            1 => \App\Constants\GameTypes::COMPETITIVE_TEXT,
+            2 => \App\Constants\GameTypes::FRIENDLY_TEXT,
+            default => 'unknown',
+        };
+    }
+}

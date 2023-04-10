@@ -19,6 +19,7 @@ class GameResource extends JsonResource
             'time' => $this['time'],
             'city' => $this['city']['name'],
             'area' => $this['area']['name'],
+            'type' =>  getGameType($this['type']),
             'user' => UserResource::make($this['user']),
             'location' => $this['location_url'],
             'joined_players_count' => getJoinedPlayersCount($this['id']),
