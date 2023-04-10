@@ -54,6 +54,8 @@ Route::group(['middleware' => 'auth:sanctum'], static function () {
 //Stadium Routes
     Route::post('search-stadiums', [StadiumController::class, 'searchStadiums']);
 
+//Scouter Routes
+
 });
 
 Route::get('get-cities', [GeneralController::class, 'getALlCities']);
