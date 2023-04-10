@@ -4,7 +4,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
         <li class="nav-item">
-            <a class="nav-link {{ !Route::is('admin.dashboard') ? 'collapsed' : '' }}" href="{{ route('admin.home') }}">
+            <a class="nav-link {{ !Route::is('admin.dashboard') ? 'collapsed' : '' }}" href="{{ route('admin.dashboard') }}">
                 <span>Dashboard</span>
             </a>
         </li>
