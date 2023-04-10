@@ -41,6 +41,7 @@ Route::group(['middleware' => 'auth:sanctum'], static function () {
     Route::delete('delete-game/{id}', [GamesController::class, 'destroy']);
     Route::post('search-games', [GamesController::class, 'searchGames']);
     Route::get('get-created-games', [GamesController::class, 'getCreatedGames']);
+    Route::post('get-competitive-games', [GamesController::class, 'getCompetitiveGames']);
 
 
 //Join Routes
