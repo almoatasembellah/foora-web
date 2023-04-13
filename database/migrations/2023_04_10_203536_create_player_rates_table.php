@@ -10,6 +10,11 @@ return new class extends Migration {
         Schema::create('player_rates', function (Blueprint $table) {
             $table->id();
             $table->tinyInteger('speed')->default(0);
+            $table->tinyInteger('dribbling')->default(0);
+            $table->tinyInteger('physicality')->default(0);
+            $table->tinyInteger('shooting')->default(0);
+            $table->tinyInteger('passing')->default(0);
+            $table->tinyInteger('defending')->default(0);
 
             $table->foreignId('scouter_id')->constrained('users')->cascadeOnDelete();
             $table->foreignId('player_id')->constrained('users')->cascadeOnDelete();

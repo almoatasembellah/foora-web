@@ -83,4 +83,13 @@ class GamesController extends Controller
         }
         return $this->sendError("Game Delete Error", "Game Not Found");
     }
+
+    public function getSpecificGame($id)
+    {
+        $game = Game::where('id', $id)->first();
+        if ($game) {
+            return $this->sendResponse(GameResource::make($game), "Game Fetched successfully");
+        }
+        return $this->sendError("Game Error", "Game Not Found");
+    }
 }
