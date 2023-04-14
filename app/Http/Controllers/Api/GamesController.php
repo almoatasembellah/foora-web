@@ -10,6 +10,7 @@ use App\Http\Requests\Api\Game\UpdateGameRequest;
 use App\Http\Resources\Api\GameResource;
 use App\Http\Traits\HandleApi;
 use App\Models\Game;
+use App\Models\PlayerRate;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -91,5 +92,46 @@ class GamesController extends Controller
             return $this->sendResponse(GameResource::make($game), "Game Fetched successfully");
         }
         return $this->sendError("Game Error", "Game Not Found");
+    }
+
+    public function calculateOverallRating(Player $player)
+    {
+        $overallRating = ($player->pace + $player->shooting + $player->passing + $player->dribbling + $player->defending + $player->physical) / 6;
+
+        return round($overallRating);
+    }
+
+
+    public function ratePlayer(PlayerRate $player, Request $request)
+    {
+        $validatedData = $request->validate([
+            'pace' => 'required|integer|min:1|max:99',
+            'shooting' => 'required|integer|min:1|max:99',
+            'passing' => 'required|integer|min:1|max:99',
+            'dribbling' => 'required|integer|min:1|max:99',
+            'defending' => 'required|integer|min:1|max:99',
+            'physical' => 'required|integer|min:1|max:99',
+        ]);
+
+        $player->update($validatedData);
+
+        $overallRating = $this->calculateOverallRating($player);
+
+        $player->user->overall_rating = $overallRating;
+        $player->user->save();
+
+        return redirect()->back()->with('success', 'Player rated successfully.');
+    }
+
+    public function storePlayerRating(Request $request, $playerId) {
+        $player = Player::find($playerId);
+        $rating = $request->input('rating');
+
+        $player->ratings()->create([
+            'user_id' => auth()->user()->id,
+            'rating' => $rating,
+        ]);
+
+        return redirect()->back()->with('success', 'Player rated successfully.');
     }
 }
