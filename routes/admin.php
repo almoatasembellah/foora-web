@@ -11,11 +11,9 @@ use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', static function () {
-    return redirect()->route('admin.auth.login');
-})->name('home');
+Route::get('/', static function () {return view('admin.home');})->name('home')->middleware('guest:admin');
 
-Route::group(['prefix' => 'auth', 'as' => 'auth.'], static function () {
+Route::group([ 'as' => 'auth.'], static function () {
     Route::get('login', [LoginController::class, 'login'])->name('login');
     Route::post('login', [LoginController::class, 'submit'])->name('login.submit');
     Route::post('logout', [LoginController::class, 'logout'])->name('logout');
@@ -30,5 +28,4 @@ Route::group(['middleware' => ['is-admin']], static function () {
     Route::resource('games', GamesController::class);
     Route::resource('stadiums', StadiumController::class);
     Route::resource('users', UserController::class);
-
 });

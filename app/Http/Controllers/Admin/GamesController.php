@@ -24,7 +24,7 @@ class GamesController extends Controller
 
     }
 
-    public function destroy($game)
+    public function destroy(Game $game)
     {
         $game->delete();
         return redirect()->route('admin.games.index')->with(['success'=>'Game Deleted successfully']);
