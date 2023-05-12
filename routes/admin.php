@@ -11,7 +11,7 @@ use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', static function () {return view('admin.home');})->name('home')->middleware('guest:admin');
+Route::get('/', static function () {return redirect()->route('login');})->name('home')->middleware('guest:admin');
 
 Route::group([ 'as' => 'auth.'], static function () {
     Route::get('login', [LoginController::class, 'login'])->name('login');
