@@ -10,18 +10,48 @@ class UserSeeder extends Seeder
 {
     public function run(): void
     {
-        User::create([
-            'name' => 'Tarek',
-            'email' => 'tarek@gmail.com',
-            'password' => bcrypt('123456789'),
-            'age' => 21,
-            'height' => 172,
-            'weight' => 68,
-            'phone' => '01099470527',
-            'image' => 'user.png',
-            'city_id' => 1,
-            'area_id' => 1,
-            'role_id' => Roles::PLAYER
-        ]);
+        $users = [
+            [
+                'name' => 'Tarek',
+                'email' => 'tarek@gmail.com',
+                'password' => bcrypt('123456789'),
+                'age' => 21,
+                'height' => 172,
+                'weight' => 68,
+                'phone' => '01099470527',
+                'image' => 'user.png',
+                'city_id' => 1,
+                'area_id' => 1,
+                'role_id' => Roles::PLAYER
+            ],
+            [
+                'name' => 'Rezk',
+                'email' => 'rezk@gmail.com',
+                'password' => bcrypt('123456789'),
+                'age' => 21,
+                'height' => 172,
+                'weight' => 68,
+                'phone' => '01099470527',
+                'image' => 'user.png',
+                'city_id' => 1,
+                'area_id' => 1,
+                'role_id' => Roles::PLAYER
+            ],
+            [
+                'name' => 'Alaa',
+                'email' => 'alaa@gmail.com',
+                'password' => bcrypt('123456789'),
+                'age' => 24,
+                'phone' => '01099470527',
+                'image' => 'user.png',
+                'city_id' => 1,
+                'area_id' => 1,
+                'role_id' => Roles::SCOUTER
+            ]
+        ];
+
+        foreach ($users as $user) {
+            User::create($user);
+        }
     }
 }

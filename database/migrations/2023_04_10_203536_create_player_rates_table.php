@@ -19,7 +19,6 @@ return new class extends Migration {
             $table->foreignId('scouter_id')->constrained('users')->cascadeOnDelete();
             $table->foreignId('player_id')->constrained('users')->cascadeOnDelete();
             $table->foreignId('game_id')->constrained('games')->cascadeOnDelete();
-            $table->unsignedBigInteger('user_id');
             $table->timestamps();
         });
     }

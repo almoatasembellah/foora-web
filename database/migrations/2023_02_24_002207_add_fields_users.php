@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::table('users',function (Blueprint $table){
             $table->tinyInteger('age');
-            $table->string('height');
-            $table->string('weight');
+            $table->string('height')->nullable();
+            $table->string('weight')->nullable();
             $table->string('phone');
         });
     }

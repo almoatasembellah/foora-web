@@ -5,6 +5,7 @@ use App\Http\Controllers\Api\GamesController;
 use App\Http\Controllers\Api\GeneralController;
 use App\Http\Controllers\Api\JoinedPlayersController;
 use App\Http\Controllers\Api\ProfileController;
+use App\Http\Controllers\Api\ScouterController;
 use App\Http\Controllers\Api\StadiumController;
 use Illuminate\Support\Facades\Route;
 
@@ -56,7 +57,8 @@ Route::group(['middleware' => 'auth:sanctum'], static function () {
     Route::post('search-stadiums', [StadiumController::class, 'searchStadiums']);
 
 //Scouter Routes
-
+    Route::post('scoute-player', [ScouterController::class, 'scoutePlayer']);
+    Route::get('get-scouted-match', [ScouterController::class, 'getScoutedMatch']);
 });
 
 Route::get('get-cities', [GeneralController::class, 'getALlCities']);

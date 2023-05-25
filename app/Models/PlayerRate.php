@@ -23,13 +23,4 @@ class PlayerRate extends Model
         return $this->hasMany(Game::class , 'game_id' , 'id');
     }
 
-    public function ratings()
-    {
-        return $this->hasMany(Rating::class);
-    }
-
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
 }

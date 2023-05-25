@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources\Api;
 
+use App\Service\PlayerRateService;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -19,7 +20,8 @@ class UserResource extends JsonResource
             'image' => $this['image'] === 'user.png' ?  url('images/user.png') : url("storage/{$this['image']}"),
             'phone' => $this['phone'],
             'city' => $this['city']['name'],
-            'area' => $this['area']['name']
+            'area' => $this['area']['name'],
+            'rates' => PlayerRateService::getPlayerRateOverall($this['rates'])
         ]);
     }
 }

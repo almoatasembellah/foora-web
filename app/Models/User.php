@@ -57,4 +57,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(PlayerRate::class);
     }
+
+    public function rates()
+    {
+        return $this->hasMany(PlayerRate::class , 'player_id' , 'id');
+    }
 }
