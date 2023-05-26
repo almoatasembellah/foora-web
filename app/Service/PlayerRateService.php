@@ -22,6 +22,9 @@ class PlayerRateService
             $physical += $rate['physical'];
         }
 
+        if (count($rates) === 0){
+            return [];
+        }
         return [
             'pace' => floor($pace / count($rates)),
             'shooting' => floor($shooting / count($rates)),
