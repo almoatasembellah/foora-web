@@ -17,4 +17,14 @@ class Stadium extends Model
     {
         return $this->belongsTo(Area::class);
     }
+
+    public function owner()
+    {
+        return $this->belongsTo(User::class , 'owner_id' , 'id');
+    }
+
+    public function hours()
+    {
+        return $this->hasMany(StadiumWorkingHour::class , 'stadium_id' , 'id');
+    }
 }

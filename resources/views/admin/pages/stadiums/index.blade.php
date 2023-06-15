@@ -46,6 +46,8 @@
                     <thead>
                     <tr>
                         <th>#</th>
+                        <th>Image</th>
+                        <th>Owner</th>
                         <th>Name</th>
                         <th>City</th>
                         <th>Area</th>
@@ -62,6 +64,10 @@
                     @foreach($stadiums as $key => $stadium)
                         <tr>
                             <td>{{ $key + 1 }}</td>
+                            <td>
+                                <img src="{{ asset("img/$stadium->image") }}" alt="{{ $stadium['name'] }}">
+                            </td>
+                            <td>{{ $stadium->owner->name }}</td>
                             <td>{{ $stadium->name }}</td>
                             <td>{{ $stadium->city->name }}</td>
                             <td>{{ $stadium->area->name }}</td>

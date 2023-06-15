@@ -9,6 +9,7 @@ return new class extends Migration {
     {
         Schema::create('stadiums', function (Blueprint $table) {
             $table->id();
+            $table->string('image')->default('stadium.png');
             $table->string('name');
             $table->foreignId('city_id')->constrained();
             $table->foreignId('area_id')->constrained();
@@ -18,6 +19,7 @@ return new class extends Migration {
             $table->string('instagram_url');
             $table->tinyInteger('type');
             $table->tinyInteger('gross_type')->default(1);
+            $table->foreignId('owner_id')->constrained('users')->cascadeOnDelete();
             $table->timestamps();
         });
     }

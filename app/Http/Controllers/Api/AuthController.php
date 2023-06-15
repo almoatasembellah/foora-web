@@ -41,18 +41,17 @@ class AuthController extends Controller
 
     }
 
-    public function login(LoginRequest $request): JsonResponse
+    public function playerLogin(LoginRequest $request): JsonResponse
 
     {
 
-        if(Auth::attempt(['email' => $request->get('email'), 'password' => $request->get('password')])){
+        if(Auth::attempt(['email' => $request->get('email'), 'password' => $request->get('password') , 'role_id' => Roles::PLAYER])){
 
             $user = Auth::user();
 
             $data['token'] =  $user?->createToken('FooraGo')->plainTextToken;
 
             $data['name'] =  $user?->name;
-
 
 
             return $this->sendResponse($data, 'You login successfully.');
@@ -62,6 +61,45 @@ class AuthController extends Controller
         return $this->sendError('Unauthorized','This email or password is wrong.',403);
     }
 
+    public function scouterLogin(LoginRequest $request): JsonResponse
+
+    {
+
+        if(Auth::attempt(['email' => $request->get('email'), 'password' => $request->get('password') , 'role_id' => Roles::SCOUTER])){
+
+            $user = Auth::user();
+
+            $data['token'] =  $user?->createToken('FooraGo')->plainTextToken;
+
+            $data['name'] =  $user?->name;
+
+
+            return $this->sendResponse($data, 'You login successfully.');
+
+        }
+
+        return $this->sendError('Unauthorized','This email or password is wrong.',403);
+    }
+
+    public function venueLogin(LoginRequest $request): JsonResponse
+
+    {
+
+        if(Auth::attempt(['email' => $request->get('email'), 'password' => $request->get('password') , 'role_id' => Roles::VENUE])){
+
+            $user = Auth::user();
+
+            $data['token'] =  $user?->createToken('FooraGo')->plainTextToken;
+
+            $data['name'] =  $user?->name;
+
+
+            return $this->sendResponse($data, 'You login successfully.');
+
+        }
+
+        return $this->sendError('Unauthorized','This email or password is wrong.',403);
+    }
 
 
     public function logout(Request $request): JsonResponse

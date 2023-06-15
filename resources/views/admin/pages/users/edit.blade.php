@@ -60,19 +60,21 @@
                                value="{{ old('age') ?? $user->age }}">
                     </div>
 
-                    <div class="px-2 py-1">
-                        <label for="height" class="form-label">Height</label>
-                        <input id="height" type="number"
-                               class="form-control" name="height"
-                               value="{{ old('height') ?? $user->height }}">
-                    </div>
+                   @if($user->role_id === \App\Constants\Roles::PLAYER)
+                        <div class="px-2 py-1">
+                            <label for="height" class="form-label">Height</label>
+                            <input id="height" type="number"
+                                   class="form-control" name="height"
+                                   value="{{ old('height') ?? $user->height }}">
+                        </div>
 
-                    <div class="px-2 py-1">
-                        <label for="weight" class="form-label">Weight</label>
-                        <input id="weight" type="number"
-                               class="form-control" name="weight"
-                               value="{{ old('weight') ?? $user->weight }}">
-                    </div>
+                        <div class="px-2 py-1">
+                            <label for="weight" class="form-label">Weight</label>
+                            <input id="weight" type="number"
+                                   class="form-control" name="weight"
+                                   value="{{ old('weight') ?? $user->weight }}">
+                        </div>
+                    @endif
 
                     <div class="px-2 py-1">
                         <label for="phone" class="form-label">Phone</label>

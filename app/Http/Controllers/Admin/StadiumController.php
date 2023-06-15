@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Constants\Roles;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\StadiumRequest;
 use App\Models\Area;
 use App\Models\City;
 use App\Models\Stadium;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class StadiumController extends Controller
@@ -14,8 +16,6 @@ class StadiumController extends Controller
     public function index()
     {
         $stadiums = Stadium::latest()->paginate(10);
-
-
         return view('admin.pages.stadiums.index' , compact('stadiums' ));
     }
 
@@ -23,7 +23,8 @@ class StadiumController extends Controller
     {
         $cities = City::all();
         $areas = Area::all();
-        return view('admin.pages.stadiums.create' , compact('cities' , 'areas'));
+        $venueOwners = User::where('role_id' , Roles::VENUE)->get();
+        return view('admin.pages.stadiums.create' , compact('cities' , 'areas' , 'venueOwners'));
     }
     public function store(StadiumRequest $request)
     {
@@ -35,7 +36,8 @@ class StadiumController extends Controller
     {
         $cities = City::all();
         $areas = Area::all();
-        return view('admin.pages.stadiums.edit' , compact('stadium','cities' , 'areas'));
+        $venueOwners = User::where('role_id' , Roles::VENUE)->get();
+        return view('admin.pages.stadiums.edit' , compact('stadium','cities' , 'areas' , 'venueOwners'));
     }
 
     public function update(StadiumRequest $request, Stadium $stadium)

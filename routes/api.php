@@ -7,6 +7,7 @@ use App\Http\Controllers\Api\JoinedPlayersController;
 use App\Http\Controllers\Api\ProfileController;
 use App\Http\Controllers\Api\ScouterController;
 use App\Http\Controllers\Api\StadiumController;
+use App\Http\Controllers\Api\VenueController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,7 +21,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('login', [AuthController::class, 'login']);
+Route::post('player/login', [AuthController::class, 'playerLogin']);
+Route::post('scouter/login', [AuthController::class, 'scouterLogin']);
+Route::post('venue/login', [AuthController::class, 'venueLogin']);
+
 Route::post('register', [AuthController::class, 'register']);
 
 Route::group(['middleware' => 'auth:sanctum'], static function () {
@@ -55,6 +59,14 @@ Route::group(['middleware' => 'auth:sanctum'], static function () {
 
 //Stadium Routes
     Route::post('search-stadiums', [StadiumController::class, 'searchStadiums']);
+    Route::group(['prefix' => 'venue'] , function (){
+        Route::get('get-stadium', [VenueController::class, 'getStadium']);
+        Route::put('update-stadium', [VenueController::class, 'updateStadium']);
+        Route::get('stadium-hours/{stadiumId}', [VenueController::class, 'getStadiumHours']);
+        Route::post('add-stadium-hours', [VenueController::class, 'addStadiumHours']);
+        Route::delete('delete-stadium-hours/{hourId}', [VenueController::class, 'deleteStadiumHours']);
+
+    });
 
 //Scouter Routes
     Route::post('scoute-player', [ScouterController::class, 'scoutePlayer']);
@@ -63,3 +75,4 @@ Route::group(['middleware' => 'auth:sanctum'], static function () {
 
 Route::get('get-cities', [GeneralController::class, 'getALlCities']);
 Route::get('city/{city_id}/areas', [GeneralController::class, 'getCityAreas']);
+Route::get('get-leader-board' , [GeneralController::class , 'getLeaderBoard']);

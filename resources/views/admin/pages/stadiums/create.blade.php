@@ -106,6 +106,15 @@
                        </select>
                    </div>
 
+                   <div class="px-2 py-1">
+                       <label for="owner_id" class="form-label">Venue Owner</label>
+                       <select class="form-select" name="owner_id" id="owner_id">
+                         @foreach($venueOwners as $venueOwner)
+                               <option value="{{ $venueOwner['id'] }}">{{ $venueOwner['name'] }}</option>
+                         @endforeach
+                       </select>
+                   </div>
+
                    <div class="modal-footer my-4 w-100">
                        <div class="col-md-6 px-3">
                            <button type="button" class="btn btn-secondary w-100" data-bs-dismiss="modal">Close</button>

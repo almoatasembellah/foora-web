@@ -46,7 +46,7 @@ class UserSeeder extends Seeder
                 'image' => 'user.png',
                 'city_id' => 1,
                 'area_id' => 1,
-                'role_id' => Roles::SCOUTER
+                'role_id' => Roles::VENUE
             ]
         ];
 
