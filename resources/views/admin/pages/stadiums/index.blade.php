@@ -66,7 +66,7 @@
                         <tr>
                             <td>{{ $key + 1 }}</td>
                             <td>
-                                <img src="{{ asset("img/$stadium->image") }}" alt="{{ $stadium['name'] }}">
+                                <img style="width: 50px; height: 50px;" src="{{ $stadium->image === 'stadium.png' ? asset('img/stadium.png') : asset("$stadium->image") }}" alt="{{ $stadium['name'] }}">
                             </td>
                             <td>{{ $stadium->owner->name }}</td>
                             <td>{{ $stadium->name }}</td>

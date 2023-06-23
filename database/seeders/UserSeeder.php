@@ -47,6 +47,17 @@ class UserSeeder extends Seeder
                 'city_id' => 1,
                 'area_id' => 1,
                 'role_id' => Roles::VENUE
+            ],
+            [
+                'name' => 'Mohy',
+                'email' => 'mohy@gmail.com',
+                'password' => bcrypt('123456789'),
+                'age' => 21,
+                'phone' => '01099470527',
+                'image' => 'user.png',
+                'city_id' => 1,
+                'area_id' => 1,
+                'role_id' => Roles::SCOUTER
             ]
         ];
 

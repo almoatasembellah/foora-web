@@ -66,8 +66,8 @@
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->age }}</td>
-                            <td>{{ $user->height }}</td>
-                            <td>{{ $user->weight }}</td>
+                            <td>{{ $user->height ?? '---' }}</td>
+                            <td>{{ $user->weight ?? '---' }}</td>
                             <td>{{ $user->phone }}</td>
                             <td>{{ $user->role->name }}</td>
                             <td>{{ $user->city->name }}</td>

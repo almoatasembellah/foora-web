@@ -63,6 +63,7 @@ Route::group(['middleware' => 'auth:sanctum'], static function () {
         Route::get('get-stadium', [VenueController::class, 'getStadium']);
         Route::put('update-stadium', [VenueController::class, 'updateStadium']);
         Route::post('upload-stadium-image', [VenueController::class, 'uploadStadiumImage']);
+        Route::delete('delete-stadium-image', [VenueController::class, 'deleteStadiumImage']);
         Route::get('stadium-hours/{stadiumId}', [VenueController::class, 'getStadiumHours']);
         Route::post('add-stadium-hours', [VenueController::class, 'addStadiumHours']);
         Route::delete('delete-stadium-hours/{hourId}', [VenueController::class, 'deleteStadiumHours']);
@@ -70,8 +71,9 @@ Route::group(['middleware' => 'auth:sanctum'], static function () {
     });
 
 //Scouter Routes
+    Route::post('attend-game', [ScouterController::class, 'attendGame']);
     Route::post('scoute-player', [ScouterController::class, 'scoutePlayer']);
-    Route::get('get-scouted-match', [ScouterController::class, 'getScoutedMatch']);
+    Route::get('get-scouted-players', [ScouterController::class, 'getScoutedPlayers']);
 });
 
 Route::get('get-cities', [GeneralController::class, 'getALlCities']);

@@ -60,4 +60,12 @@ class VenueController extends Controller
         $stadium->update($data);
         return self::sendResponse([] , 'Stadium is updated successfully');
     }
+
+    public function deleteStadiumImage(Request $request)
+    {
+        $stadium = Stadium::where('owner_id', $request->user()->id)->firstOrFail();
+        \Storage::delete($stadium->image);
+        $stadium->update(['image' => 'stadium.png']);
+        return self::sendResponse([] , 'Stadium is deleted successfully');
+    }
 }
