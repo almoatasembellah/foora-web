@@ -74,6 +74,7 @@ Route::group(['middleware' => 'auth:sanctum'], static function () {
     Route::post('attend-game', [ScouterController::class, 'attendGame']);
     Route::post('scoute-player', [ScouterController::class, 'scoutePlayer']);
     Route::get('get-scouted-players', [ScouterController::class, 'getScoutedPlayers']);
+    Route::get('get-scouted-matches', [ScouterController::class, 'getScoutedMatches']);
 });
 
 Route::get('get-cities', [GeneralController::class, 'getALlCities']);

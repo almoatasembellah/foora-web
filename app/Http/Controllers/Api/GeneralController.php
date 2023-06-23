@@ -4,11 +4,15 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Api\CityResource;
+use App\Http\Resources\Api\UserResource;
+use App\Http\Resources\LeaderBoardResource;
 use App\Http\Traits\HandleApi;
 use App\Models\Area;
 use App\Models\City;
 use App\Models\PlayerRate;
+use App\Models\User;
 use App\Service\PlayerRateService;
+use Illuminate\Support\Facades\DB;
 
 
 class GeneralController extends Controller
@@ -29,14 +33,8 @@ class GeneralController extends Controller
 
     public function getLeaderBoard()
     {
-        $playerRates = PlayerRate::all()->groupBy('player_id');
+        $users = User::orderBy('overall' , 'DESC')->take(10)->get();
 
-        $overallRates = [];
-        foreach ($playerRates as $key => $player){
-            $overallRates[$key] = PlayerRateService::getPlayerRateOverall($player)['overall'];
-        }
-
-
-        return $this->sendResponse([] , 'top 10 players are fetched');
+        return $this->sendResponse(LeaderBoardResource::collection($users) , 'top 10 players are fetched');
     }
 }
