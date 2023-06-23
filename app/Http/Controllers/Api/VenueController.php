@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\AddHoursRequest;
+use App\Http\Requests\Api\Auth\UploadImageRequest;
 use App\Http\Requests\Api\Stadium\StadiumRequest;
+use App\Http\Requests\VenueImageRequest;
 use App\Http\Resources\StadiumResource;
 use App\Http\Traits\HandleApi;
 use App\Models\Stadium;
@@ -25,11 +27,6 @@ class VenueController extends Controller
     {
         $stadium = Stadium::where('owner_id', $request->user()->id)->firstOrFail();
         $data = $request->validated();
-
-        if ($request->has('image')){
-            $imagePath = $request->file('image')->store('stadium-images', 'public');
-            $data['image'] = $imagePath;
-        }
         $stadium->update($data);
         return self::sendResponse([] , 'Stadium is updated successfully');
     }
@@ -50,5 +47,17 @@ class VenueController extends Controller
         $hour = StadiumWorkingHour::where('id' , $hourId)->firstOrFail();
         $hour->delete();
         return self::sendResponse([] , 'Stadium is deleted successfully');
+    }
+
+    public function uploadStadiumImage(VenueImageRequest $request)
+    {
+        $stadium = Stadium::where('owner_id', $request->user()->id)->firstOrFail();
+        $data = $request->validated();
+        if ($request->has('image')){
+            $imagePath = $request->file('image')->store('stadium-images', 'public');
+            $data['image'] = $imagePath;
+        }
+        $stadium->update($data);
+        return self::sendResponse([] , 'Stadium is updated successfully');
     }
 }

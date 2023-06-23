@@ -62,6 +62,7 @@ Route::group(['middleware' => 'auth:sanctum'], static function () {
     Route::group(['prefix' => 'venue'] , function (){
         Route::get('get-stadium', [VenueController::class, 'getStadium']);
         Route::put('update-stadium', [VenueController::class, 'updateStadium']);
+        Route::post('upload-stadium-image', [VenueController::class, 'uploadStadiumImage']);
         Route::get('stadium-hours/{stadiumId}', [VenueController::class, 'getStadiumHours']);
         Route::post('add-stadium-hours', [VenueController::class, 'addStadiumHours']);
         Route::delete('delete-stadium-hours/{hourId}', [VenueController::class, 'deleteStadiumHours']);

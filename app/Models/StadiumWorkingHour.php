@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class StadiumWorkingHour extends Model
 {
     protected $fillable = [
-        'day' , 'from' , 'to' , 'stadium_id'
+        'day' , 'from' , 'to' , 'stadium_id' , 'price'
     ];
 
     public function stadium()

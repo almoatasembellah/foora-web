@@ -14,7 +14,7 @@ class StadiumRequest extends FormRequest
             'location_url' => 'required|url',
             'facebook_url' => 'required|url',
             'instagram_url' => 'required|url',
-            'image' => ['nullable', 'image', 'mimes:png.jpg,jpeg,gif', 'max:2096']
+            'phone' => ['required' , 'numeric']
         ];
     }
 

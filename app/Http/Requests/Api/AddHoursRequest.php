@@ -13,7 +13,8 @@ class AddHoursRequest extends FormRequest
             'stadium_id' => ['required' , Rule::exists('stadiums' , 'id')],
             'day' => ['required', 'date'],
             'from' => ['required', 'string'],
-            'to' => ['required', 'string']
+            'to' => ['required', 'string'],
+            'price' => ['required', 'numeric'],
         ];
     }
 

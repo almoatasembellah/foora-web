@@ -14,6 +14,7 @@ class StadiumResource extends JsonResource
             'images' => $this['image'] === 'stadium.png' ?  url('img/stadium.png') : url("storage/{$this['image']}"),
             'name' => $this['name'],
             'city' => $this['city']['name'],
+            'phone' => $this['phone'],
             'area' =>  $this['area']['name'],
             'location_url' => $this['location_url'],
             'space' => $this['space'],
