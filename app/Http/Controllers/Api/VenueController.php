@@ -7,7 +7,7 @@ use App\Http\Requests\Api\AddHoursRequest;
 use App\Http\Requests\Api\Auth\UploadImageRequest;
 use App\Http\Requests\Api\Stadium\StadiumRequest;
 use App\Http\Requests\VenueImageRequest;
-use App\Http\Resources\StadiumResource;
+use App\Http\Resources\Api\StadiumResource;
 use App\Http\Traits\HandleApi;
 use App\Models\Stadium;
 use App\Models\StadiumWorkingHour;

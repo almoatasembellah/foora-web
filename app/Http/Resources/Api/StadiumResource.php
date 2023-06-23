@@ -9,20 +9,19 @@ class StadiumResource extends JsonResource
 {
     public function toArray(Request $request): array
     {
-        return[
+        return array_filter([
             'id' => $this['id'],
+            'images' => $this['image'] === 'stadium.png' ?  url('img/stadium.png') : url("storage/{$this['image']}"),
             'name' => $this['name'],
             'city' => $this['city']['name'],
-            'area' => $this['area']['name'],
             'phone' => $this['phone'],
-            'location' => $this['location_url'],
-            'space' =>  $this['space'],
+            'area' =>  $this['area']['name'],
+            'location_url' => $this['location_url'],
+            'space' => $this['space'],
             'facebook_url' => $this['facebook_url'],
             'instagram_url' => $this['instagram_url'],
-            'type' => $this['type'],
-            'type_text' => getStadiumType($this['type']),
-            'gross_type' => $this['gross_type'],
-            'gross_type_text' => getStadiumGrossType($this['gross_type'])
-        ];
+            'type' => getStadiumType($this['type']),
+            'gross_type' => getStadiumGrossType($this['gross_type']),
+        ]);
     }
 }

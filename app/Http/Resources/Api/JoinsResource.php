@@ -9,7 +9,7 @@ class JoinsResource extends JsonResource
 {
     public function toArray(Request $request): array
     {
-        return[
+        return array_filter([
             'id' => $this['game']['id'],
             'venue_name' => $this['game']['name'],
             'phone' => $this['game']['phone'],
@@ -23,6 +23,6 @@ class JoinsResource extends JsonResource
             'location' => $this['game']['location_url'],
             'status' => geJoinGameStatus($this['status']),
             'player' => UserResource::make($this['user'])
-        ];
+        ]);
     }
 }

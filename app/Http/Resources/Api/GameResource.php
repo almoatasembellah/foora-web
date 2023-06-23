@@ -9,7 +9,7 @@ class GameResource extends JsonResource
 {
     public function toArray(Request $request): array
     {
-        return[
+        return array_filter([
             'id' => $this['id'],
             'venue_name' => $this['name'],
             'phone' => $this['phone'],
@@ -24,6 +24,6 @@ class GameResource extends JsonResource
             'location' => $this['location_url'],
             'joined_players_count' => getJoinedPlayersCount($this['id']),
             'accepted_players' => getApprovedPlayers($this['id']),
-        ];
+        ]);
     }
 }
