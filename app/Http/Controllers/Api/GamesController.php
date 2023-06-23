@@ -36,7 +36,6 @@ class GamesController extends Controller
         $games = Game::where('user_id' , '!=' , $request->user()->id)
             ->where('city_id' , $request->get('city_id'))
             ->where('date', '>=', Carbon::today()->format('Y-m-d'))
-            ->where('time' , '>=' , Carbon::now()->addHours(2)->format('h:i A'))
             ->where('type' , GameTypes::COMPETITIVE)
             ->where(function ($query) use ($request) {
                 if ($request->get('area_id')){
