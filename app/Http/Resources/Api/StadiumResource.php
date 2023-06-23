@@ -14,6 +14,7 @@ class StadiumResource extends JsonResource
             'name' => $this['name'],
             'city' => $this['city']['name'],
             'area' => $this['area']['name'],
+            'phone' => $this['phone'],
             'location' => $this['location_url'],
             'space' =>  $this['space'],
             'facebook_url' => $this['facebook_url'],

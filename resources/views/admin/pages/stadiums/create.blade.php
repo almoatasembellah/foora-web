@@ -68,6 +68,11 @@
                    </div>
 
                    <div class="px-2 py-1">
+                       <label class="form-label" for="phone">Phone</label>
+                       <input id="phone" type="text" name="phone" class="form-control">
+                   </div>
+
+                   <div class="px-2 py-1">
                        <label class="form-label" for="location_url">Location URL</label>
                        <input id="location_url" type="text" name="location_url" class="form-control">
                    </div>

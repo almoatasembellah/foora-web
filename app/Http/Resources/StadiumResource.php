@@ -10,6 +10,7 @@ class StadiumResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
+            'id' => $this['id'],
             'images' => $this['image'] === 'stadium.png' ?  url('img/stadium.png') : url("storage/{$this['image']}"),
             'name' => $this['name'],
             'city' => $this['city']['name'],

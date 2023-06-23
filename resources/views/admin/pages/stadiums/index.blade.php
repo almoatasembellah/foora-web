@@ -51,6 +51,7 @@
                         <th>Name</th>
                         <th>City</th>
                         <th>Area</th>
+                        <th>Phone</th>
                         <th>Location</th>
                         <td>Space</td>
                         <td>Type</td>
@@ -71,6 +72,7 @@
                             <td>{{ $stadium->name }}</td>
                             <td>{{ $stadium->city->name }}</td>
                             <td>{{ $stadium->area->name }}</td>
+                            <td>{{ $stadium->phone ?? '---' }}</td>
                             <td>
                                 <a class="btn btn-primary" href="{{ $stadium->location_url }}" target="_blank">See location</a>
                             </td>

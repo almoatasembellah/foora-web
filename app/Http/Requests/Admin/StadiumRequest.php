@@ -13,6 +13,7 @@ class StadiumRequest extends FormRequest
             'name' => 'required',
             'city_id' => ['required', Rule::exists('cities', 'id')],
             'area_id' => ['required', Rule::exists('areas', 'id')],
+            'phone' => ['required' , 'numeric' , Rule::unique('stadiums' , 'phone')->ignore($this->stadium)],
             'location_url' => 'required|url',
             'space' => 'required|numeric',
             'facebook_url' => 'required|url',
